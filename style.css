@@ -1,0 +1,9 @@
+body {
+    font-family: "helvetica neue","helvetica","lucida grande",arial,sans-serif;
+    color: #333;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Override defaults */
