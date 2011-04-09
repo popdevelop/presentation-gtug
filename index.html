@@ -80,13 +80,16 @@
 <div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/1">
 <h1>Google Maps on the web</h1>
 
-<h2>Popdevelop 13/4 - 2011</h2></div>
+<h2>by Popdevelop 13/4 - 2011</h2></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/2">
-<h1>Introduction</h1>
+<h1>Introduction, Google Maps V3</h1>
 
 <ul>
-<li>Google Maps V3</li>
+<li>Released May 2009</li>
 <li>Completely re-written from V2</li>
+<li>Optimized "bootstrap" process</li>
+<li>Works well in mobile devices (webkit)</li>
+<li>License?</li>
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page incremental" ref="intro/01_slide/3">
@@ -125,13 +128,18 @@
 </ul>
 
 
-<p><code>var map = new google.maps.Map(document.getElementById(...), { ... });</code></p></div>
+<p><code>var map = new google.maps.Map(&lt;DOM Element&gt;, { ... });</code></p>
+
+<ul>
+<li>Control width/height with CSS</li>
+</ul>
+</div>
 </div><div class="slide" data-transition="none"><div class="content full-page googlemap" ref="intro/01_slide/5">
 <h1>Standard Google map</h1>
 
 <p>This is what you get!</p>
 
-<div id="gmaps"><div id="canvas"/></div>
+<div class="gmaps"><div id="canvas"/></div>
 
 
 <script>
@@ -142,16 +150,144 @@
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   var map = new google.maps.Map(document.getElementById("canvas"), myOptions);
-  google.maps.event.trigger(map, 'resize');
   $('.googlemap').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
     map.setCenter(latlng);
   });
 </script>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style">
-<h1>style</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/6">
+<h1>Some Google maps features</h1>
+
+<p>Google maps has quite alot of built in features ready to be used. Here are a few:</p>
+
+<h2>Marker</h2>
+
+<p><code>var marker = new google.maps.Marker({...});</code></p>
+
+<h2>Info Window</h2>
+
+<p><code>var infowindow = new google.maps.InfoWindow({});</code></p>
+
+<h2>Circles/Rectangles</h2>
+
+<p><code>var cicle = new google.maps.Circle({...});</code></p>
+
+<h3>See them all at <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/1">
+<h1>Styling Google maps</h1>
+
+<p>Unstyled is pretty boring...</p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/2">
+<h1>Custom marker</h1>
+
+<p>By using Googles <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing">Custom Overlay Class</a>
+we can create our own marker using any HTML/CSS we want</p>
+
+<p><img src="file:///Users/sebastianwallin/dev/showoff/presentation-gtug/style/../img/custom_marker.png" width="426" height="311" alt="Custom marker"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/3">
+<h1>Custom tiles</h1>
+
+<ul>
+<li>Allows control of map features</li>
+<li>Allows simplification of features</li>
+<li>Allows control of map colors</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap2" ref="style/01_style/4">
+<h1>Here we go!</h1>
+
+<p>This is what google maps can look like</p>
+
+<div class="gmaps"><div id="canvas2"/></div>
+
+
+<script>
+(function() {
+  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var myOptions = {
+      zoom: 8,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var theme = [
+    {
+      featureType: "water",
+      elementType: "all",
+      stylers: [
+        { visibility: "on" },
+        { hue: "#ff00bb" },
+        { saturation: 100 }
+      ]
+    },{
+      featureType: "landscape",
+      elementType: "all",
+      stylers: [
+        { saturation: 94 },
+        { hue: "#6e00ff" },
+        { visibility: "off" }
+      ]
+    },{
+      featureType: "road",
+      elementType: "all",
+      stylers: [
+        { visibility: "off" }
+      ]
+    },{
+      featureType: "administrative",
+      elementType: "all",
+      stylers: [
+        { visibility: "off" }
+      ]
+    },{
+      featureType: "poi",
+      elementType: "all",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+  ]
+  var style = new google.maps.StyledMapType(theme, { name: "hellokitty"});
+
+  var map = new google.maps.Map(document.getElementById("canvas2"), myOptions);
+  map.mapTypes.set('hellokitty', style);
+  map.setMapTypeId('hellokitty');
+  $('.googlemap2').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(latlng);
+  });
+}());
+</script>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/5">
+<h1>Style notation</h1>
+
+<pre class="sh_javascript"><code>{
+  featureType: "water",
+  elementType: "all",
+  stylers: [
+    { visibility: "on" },
+    { hue: "#ff00bb" },
+    { saturation: 100 }
+  ]
+},{
+  featureType: "landscape",
+  elementType: "all",
+  stylers: [
+    { saturation: 94 },
+    { hue: "#6e00ff" },
+    { visibility: "off" }
+  ]
+},
+...</code></pre>
+
+<p>Try it at <a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html" title="Wizard">Google custom style wizard</a></p></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/1">
+<h1>Performance</h1>
+
+<p>Handling a lot of data (or "getting hardcore")</p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/2">
 <h1>Problems with performance</h1>
 
 <h2>to many markers on map</h2>
@@ -168,7 +304,7 @@
 <li>vissa browsers?</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/2">
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/3">
 <h1>Solution</h1>
 
 <h2>depends on the requirements of you application</h2>
@@ -180,7 +316,7 @@
 <li>data structure, volatile, size, update frequency</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/3">
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/4">
 <h1>ROI</h1>
 
 <ul>
@@ -193,7 +329,7 @@
 <li>Online Marker tests</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/4">
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/5">
 <h1>Methods of improvement</h1>
 
 <ul>
@@ -215,12 +351,12 @@
 <li>divide data, overlayinfo, markerinfo</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/5">
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/6">
 <ul>
 <li>google fusion table example</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/6">
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/7">
 <h1>performance</h1>
 
 <p>Its a usability problem, most methods of performance improvements relate somehow to interaction?</p>
