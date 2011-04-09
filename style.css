@@ -1,18 +1,40 @@
 body {
     font-family: "helvetica neue","helvetica","lucida grande",arial,sans-serif;
-    color: #333;
-    background-color: #fff;
+    color: #fff;
+    background-color: #65aaba;
     -webkit-font-smoothing: antialiased;
 }
 
+/* Title sizes */
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+
+/* Slide style */
 #preso, .slide {
+    background-color: transparent;
+    box-shadow: none;
     height: 768px;
 }
 
+
+/* Google maps */
 #gmaps {
     width: 640px;
     height: 480px;
     margin: 1em auto;
+    box-shadow: #666 0 3px 5px;
+    -webkit-box-shadow: #666 0 3px 5px;
+    -moz-box-shadow: #666 0 3px 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: #fff;
+    padding: 15px;
 }
+#gmaps #canvas {
+    height: 480px;
+}
+
 
 /* Override defaults */
