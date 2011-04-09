@@ -3,11 +3,32 @@ body {
     color: #fff;
     background-color: #65aaba;
     -webkit-font-smoothing: antialiased;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+/* Code font*/
+code, pre {
+    font-family: Consolas,
+             "Andale Mono",
+             "Lucida Console",
+             "Lucida Sans Typewriter",
+             "DejaVu Sans Mono",
+             "Bitstream Vera Sans Mono",
+             "Liberation Mono",
+             "Nimbus Mono L",
+             Monaco,
+             "Courier New",
+             Courier,
+             monospace;
+    border: 3px dashed #98CBD6;
+    color: #000;
+    padding: 0.5em;
 }
 
 /* Title sizes */
-h1 { font-size: 48px; }
-h2 { font-size: 36px; }
+h1 { font-size: 48px; color: #31626D;}
+h2 { font-size: 36px; color: #A4EEFF;}
 h3 { font-size: 24px; }
 
 /* Slide style */
@@ -36,5 +57,31 @@ h3 { font-size: 24px; }
     height: 480px;
 }
 
+/* Default widths */
+#preso h2,
+#preso ul,
+#preso code {
+    display: block;
+    width: 540px;
+    margin: 0 auto;
+    text-align: left;
+}
 
-/* Override defaults */
+#preso ul {
+    margin: 0 auto;
+    text-align: left;
+}
+
+#preso ul > li {
+    font-size: 28px;
+    margin-bottom: 0.2em;
+    align: left;
+}
+#preso ul > li:before { content: "» "; }
+
+#preso ul > li > ul > li {
+    margin-left: 1em;
+    margin-bottom: 0.2em;
+    font-size: 0.8em;
+}
+#preso ul > li > ul > li:before { content: "- "; }
