@@ -4,7 +4,14 @@ Handling a lot of data (or "getting hardcore")
 
 !SLIDE full-page
 
-# Problems with performance
+* user perceived latency – how long it takes for the page to appear usable, in
+this case for the map to be rendered
+* page ready time - how long it takes for the page to become usable, e.g. for
+the map to be draggable
+* page load time - how long it takes for all the elements to be present, in the
+case of maps this includes all of the map controls to be loaded and working
+
+!SLIDE full-page
 
 ## to many markers on map
 
@@ -12,10 +19,9 @@ Handling a lot of data (or "getting hardcore")
 
 ## to much data, load time
 
-## usability problem
+## to many javascript objects or dom elements
 
-## to many javascript objects?
- - vissa browsers?
+## usability problem
 
 !SLIDE full-page
 # Solution
@@ -35,40 +41,101 @@ Handling a lot of data (or "getting hardcore")
   * console.log, events when overlay added, map events
  * http://jsperf.com/browse
  * Online Marker tests
+ * Test with different browsers on a slow computer?
+
+The Google Maps team broke down “performance” into three categories:
+
+* user perceived latency – how long it takes for the page to appear usable, in
+this case for the map to be rendered
+* page ready time - how long it takes for the page to become usable, e.g. for
+the map to be draggable
+* page load time - how long it takes for all the elements to be present, in the
+case of maps this includes all of the map controls to be loaded and working
 
 !SLIDE full-page
 
 # Methods of improvement
+
+!SLIDE full-page
+
 * clustering
   * client side clustering
   * server side clustering
+
+Clustering techniques
+- Beratta att det finns lite olika tekniker, visa bilder lite snabbt
+Grid-based Clustering
+Regional clusrering
+Distance-based Clustering
+K-means clustering
+http://en.wikipedia.org/wiki/K-means_clustering
+http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/
+
+MarkerClusterer
+-what is it
+gridbased!
+-demo
+-http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html
+speed test clustering
+http://www.svennerberg.com/examples/markers/markerPerformance.html
+
+MarkerManager
+-what is it
+-demo
+- http://google-maps-utility-library-v3.googlecode.com/svn/tags/markermanager/1.0/docs/reference.html
+
+Marker Manager
+
+Serverside clustering
+-what is it
+-demo
+http://www.usda.gov/recovery/map/
+http://www.geograph.org.uk/mapper/clusters.php#ll=54.55,-3.88&z=6&t=p&r=c
+Try ZeeMaps (http://www.zeemaps.com). We apply several heuristics to improve
+the loading time when you have large number of markers. For less than 5,000
+markers we use a fast clustering algorithm, and only display visible markers.
+For more than 5,000 markers we use server-side tiling.
+
+!SLIDE full-page
+
+View only
+KML
+Heatmaps (gheatmap, api etc)
+Generated tiles
+FusionTable
+
 * kml layer
+
+!SLIDE full-page
+
+* google fusion table example
+Vad erbjuder fusion table for maps, areamap, heartmap, custom border
+
+!SLIDE full-page
+
 * browser/client optimizations
  * use different techniques depending on browser
  * use different techniques depending on speed
 * hide/show is fast, rendering is slow
+* data simplification
+* simplify polylines
 * fetch data more efficient
  * slim down your protocol
  * fetch using boundingbox
  * divide data, overlayinfo, markerinfo
 
+DOM elements, listeners js objects 
+The latter pattern is more efficient, with 1 modification.  Rather than
+creating a listener function in each call to .addListener(), create your
+listener function once and add that same listener to all markers.  Reducing
+the number of Objects like this helps older browsers especially.
+Render GIFs for IE, instead of alpha PNGs
+GMarker ger 5 DOM nodes, egen div ger div med img ger 2.
+
 !SLIDE full-page
 
-* google fusion table example
 
-!SLIDE full-page
-# performance #
-
-Its a usability problem, most methods of performance improvements relate somehow to interaction?
-
-Prestanda, visa lite olika matningar, vad tar tid
-
-Vad erbjuder fusion table for maps, areamap, heartmap, custom border
-
-
-http://code.google.com/p/google-maps-utility-library-v3/wiki/Libraries
-
-http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/
+# RANDOM STUFF?
 
 http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers
 
@@ -78,34 +145,16 @@ listener function once and add that same listener to all markers.  Reducing
 the number of Objects like this helps older browsers especially.
 
 Render GIFs for IE, instead of alpha PNGs
+http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/
 
 http://code.google.com/intl/sv-SE/apis/maps/articles/toomanymarkers.html
-These varied approaches are outlined in the following sections:
-Viewport Marker Management
-Flash
-Fusion Tables
-MarkerClusterer
-MarkerManager
 
-Serverside clustering
-http://www.usda.gov/recovery/map/
-http://www.geograph.org.uk/mapper/clusters.php#ll=54.55,-3.88&z=6&t=p&r=c
-Try ZeeMaps (http://www.zeemaps.com). We apply several heuristics to improve
-the loading time when you have large number of markers. For less than 5,000
-markers we use a fast clustering algorithm, and only display visible markers.
-For more than 5,000 markers we use server-side tiling.
+http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html
 
+Google I/O 2009 - Performance Tips for Geo API Mashups
+http://www.youtube.com/watch?v=zI8at1EmJjA
 
-Clustering techniques
-http://www.appelsiini.net/2008/11/introduction-to-marker-clustering-with-google-maps
-
-speed test clustering
-http://www.svennerberg.com/examples/markers/markerPerformance.html
-
-http://en.wikipedia.org/wiki/K-means_clustering
-Grid-based Clustering
-Distance-based Clustering
-Grid Clustering
+http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/v2/mediagallery.html
 
 
 Andra delar
@@ -115,6 +164,23 @@ Andra delar
  - om popdevelop
  - om mig/seb
 
-util librarys
-http://google-maps-utility-library-v3.googlecode.com/svn/tags/keydragzoom/
+Visa vad man kan göra, ingen teknik?
+
+# bra exempel
+
+http://googlemapsmania.blogspot.com/
+http://move.rmi.org/features/oilmap.html
+http://fundrace.huffingtonpost.com/
+http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
+http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&long=-122.44922089716879&market=sanfrancisco&region_id=17151&region_type=6&sf=1,2&v=6&zoomLevel=12
+http:// - mapnificient.com?
+http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp
+the wilderness downtown
+http://www.youtube.com/watch?v=w44cdIOor7E
+http://projects.nytimes.com/crime/homicides/map
+http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
+geocoding av tweets location to state
+http://www.youtube.com/watch?v=XNsrj5bE2qI
+2210 mashups online
+http://www.programmableweb.com/api/google-maps/mashups
 
