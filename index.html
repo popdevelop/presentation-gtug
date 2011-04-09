@@ -30,12 +30,15 @@
   
     <link rel="stylesheet" href="file/style.css" type="text/css"/>
   
+
+  
     <script type="text/javascript" src="file/cufon.min.js"></script>
   
     <script type="text/javascript" src="file/Museo_400.font.js"></script>
   
     <script type="text/javascript" src="file/scripts.js"></script>
   
+
   <script type="text/javascript">
   $(function(){
     setupPreso(false, './');
@@ -79,11 +82,54 @@
 
 <h2>Popdevelop 13/4 - 2011</h2></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/2">
-<h1>Introduction</h1></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/3">
-<h1>Google Maps basics</h1></div>
-</div><div class="slide" data-transition="none"><div class="content full-page googlemap" ref="intro/01_slide/4">
+<h1>Introduction</h1>
+
+<ul>
+<li>Google Maps V3</li>
+<li>Completely re-written from V2</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page incremental" ref="intro/01_slide/3">
+<h1>GIS Basics</h1>
+
+<h2>Tiles</h2>
+
+<ul>
+<li>Bitmap images</li>
+<li>For all zoom levels</li>
+<li>Non-interactive</li>
+</ul>
+
+
+<h2>Feature primitives</h2>
+
+<ul>
+<li>Points</li>
+<li>LineString</li>
+<li>PolyLine</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/4">
+<h1>Google Maps basics</h1>
+
+<ul>
+<li>Easy to get started with!</li>
+<li>Include library:</li>
+</ul>
+
+
+<p><code>&lt;script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=set_to_true_or_false"&gt;&lt;/script&gt;</code></p>
+
+<ul>
+<li>Instantiate maps with options:</li>
+</ul>
+
+
+<p><code>var map = new google.maps.Map(document.getElementById(...), { ... });</code></p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap" ref="intro/01_slide/5">
 <h1>Standard Google map</h1>
+
+<p>This is what you get!</p>
 
 <div id="gmaps"><div id="canvas"/></div>
 
@@ -232,7 +278,6 @@ Grid Clustering</p>
 
 <p>util librarys
 http://google-maps-utility-library-v3.googlecode.com/svn/tags/keydragzoom/</p></div>
->>>>>>> static presentation
 </div>
 </div>
 
