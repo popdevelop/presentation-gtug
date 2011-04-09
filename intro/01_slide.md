@@ -1,12 +1,14 @@
 !SLIDE full-page
 # Google Maps on the web #
-## Popdevelop 13/4 - 2011 ##
+## by Popdevelop 13/4 - 2011 ##
 
 !SLIDE full-page
-# Introduction #
-* Google Maps V3
+# Introduction, Google Maps V3#
+* Released May 2009
 * Completely re-written from V2
-
+* Optimized "bootstrap" process
+* Works well in mobile devices (webkit)
+* License?
 
 !SLIDE full-page incremental
 # GIS Basics
@@ -29,12 +31,14 @@
 
 * Instantiate maps with options:
 
-`var map = new google.maps.Map(document.getElementById(...), { ... });`
+`var map = new google.maps.Map(<DOM Element>, { ... });`
+
+* Control width/height with CSS
 
 !SLIDE full-page googlemap
 # Standard Google map #
 This is what you get!
-<div id="gmaps"><div id="canvas"></div></div>
+<div class="gmaps"><div id="canvas"></div></div>
 <script>
   var latlng = new google.maps.LatLng(-34.397, 150.644);
   var myOptions = {
@@ -43,10 +47,20 @@ This is what you get!
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   var map = new google.maps.Map(document.getElementById("canvas"), myOptions);
-  google.maps.event.trigger(map, 'resize');
   $('.googlemap').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
     map.setCenter(latlng);
   });
 </script>
 
+!SLIDE full-page
+# Some Google maps features
+Google maps has quite alot of built in features ready to be used. Here are a few:
+## Marker ##
+`var marker = new google.maps.Marker({...});`
+## Info Window ##
+`var infowindow = new google.maps.InfoWindow({});`
+## Circles/Rectangles ##
+`var cicle = new google.maps.Circle({...});`
+
+### See them all at [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###

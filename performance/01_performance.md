@@ -1,4 +1,8 @@
 !SLIDE full-page
+# Performance #
+Handling a lot of data (or "getting hardcore")
+
+!SLIDE full-page
 
 # Problems with performance
 
