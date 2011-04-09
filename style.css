@@ -5,5 +5,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+#preso, .slide {
+    height: 768px;
+}
+
+#gmaps {
+    width: 640px;
+    height: 480px;
+    margin: 1em auto;
+}
 
 /* Override defaults */
