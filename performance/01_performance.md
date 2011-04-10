@@ -183,4 +183,6 @@ geocoding av tweets location to state
 http://www.youtube.com/watch?v=XNsrj5bE2qI
 2210 mashups online
 http://www.programmableweb.com/api/google-maps/mashups
+heatmap
+http://boston.povo.com/Boston?heatmap&query=pizza&tags=pizza%2csandwiches,pasta&center=42.30879983710441,-71.0595703125&zoom=11
 
