@@ -51,6 +51,8 @@ h3 { font-size: 24px; }
 #preso, .slide {
     background-color: transparent;
     box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     height: 768px;
 }
 
@@ -78,6 +80,7 @@ h3 { font-size: 24px; }
     box-shadow: none;
 }
 
+.gmaps #canvas img,
 .gmaps #canvas2 img {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;

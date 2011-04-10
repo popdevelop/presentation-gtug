@@ -77,10 +77,34 @@
 </div>
 
 <div id="slides" class="offscreen" style="display:none;">
-<div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/1">
+<div class="slide" data-transition="none"><div class="content full-page" ref="popdevelop/01_popdevelop/1">
 <h1>Google Maps on the web</h1>
 
 <h2>by Popdevelop 13/4 - 2011</h2></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="popdevelop/01_popdevelop/2">
+<h1>Om popdevelop</h1>
+
+<h1>Om oss tv&#xE5;, roliga bilder</h1>
+
+<h1>Kanske filmen</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="popdevelop/01_popdevelop/3">
+<h1>vad har vi gjort</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/1">
+<h1>The google maps family</h1>
+
+<ul>
+<li>google maps</li>
+<li>google earth</li>
+<li>layers (kml, fusion, trafic, bicycle)</li>
+<li>panoramio</li>
+<li>elecvation</li>
+<li>geocoding</li>
+<li>streetview</li>
+<li>directions</li>
+<li>ad sense maps</li>
+<li>transit</li>
+</ul>
+</div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/2">
 <h1>Introduction, Google Maps V3</h1>
 
@@ -283,31 +307,39 @@ we can create our own marker using any HTML/CSS we want</p>
 ...</code></pre>
 
 <p>Try it at <a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html" title="Wizard">Google custom style wizard</a></p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/6">
+<h1>Styling controls</h1>
+
+<ul>
+<li>Map controls can be customized</li>
+</ul>
+</div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/1">
 <h1>Performance</h1>
 
-<p>Handling a lot of data (or "getting hardcore")</p></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/2">
-<h1>Problems with performance</h1>
+<p>Handling a lot of data (or "getting hardcore")</p>
 
+<ul>
+<li>user perceived latency &#x2013; how long it takes for the page to appear usable, in
+this case for the map to be rendered</li>
+<li>page ready time - how long it takes for the page to become usable, e.g. for
+the map to be draggable</li>
+<li>page load time - how long it takes for all the elements to be present, in the
+case of maps this includes all of the map controls to be loaded and working</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/2">
 <h2>to many markers on map</h2>
 
 <h2>marker rendering speed</h2>
 
 <h2>to much data, load time</h2>
 
-<h2>usability problem</h2>
+<h2>to many javascript objects or dom elements</h2>
 
-<h2>to many javascript objects?</h2>
-
-<ul>
-<li>vissa browsers?</li>
-</ul>
-</div>
+<h2>usability problem</h2></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/3">
-<h1>Solution</h1>
-
-<h2>depends on the requirements of you application</h2>
+<h1>Solution? Depends on reqs?</h1>
 
 <ul>
 <li>map interaction</li>
@@ -317,7 +349,7 @@ we can create our own marker using any HTML/CSS we want</p>
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/4">
-<h1>ROI</h1>
+<h1>Measure it</h1>
 
 <ul>
 <li>how do you measure it, find problems</li>
@@ -327,6 +359,7 @@ we can create our own marker using any HTML/CSS we want</p>
 <li>console.log, events when overlay added, map events</li>
 <li>http://jsperf.com/browse</li>
 <li>Online Marker tests</li>
+<li>Test with different browsers on a slow computer?</li>
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/5">
@@ -340,53 +373,36 @@ we can create our own marker using any HTML/CSS we want</p>
 <li>server side clustering</li>
 </ul>
 </li>
-<li>kml layer</li>
-<li>browser/client optimizations</li>
-<li>use different techniques depending on browser</li>
-<li>use different techniques depending on speed</li>
-<li>hide/show is fast, rendering is slow</li>
-<li>fetch data more efficient</li>
-<li>slim down your protocol</li>
-<li>fetch using boundingbox</li>
-<li>divide data, overlayinfo, markerinfo</li>
 </ul>
-</div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/6">
-<ul>
-<li>google fusion table example</li>
-</ul>
-</div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/7">
-<h1>performance</h1>
 
-<p>Its a usability problem, most methods of performance improvements relate somehow to interaction?</p>
 
-<p>Prestanda, visa lite olika matningar, vad tar tid</p>
+<p>Clustering techniques
+- Beratta att det finns lite olika tekniker, visa bilder lite snabbt
+Grid-based Clustering
+Regional clusrering
+Distance-based Clustering
+K-means clustering
+http://en.wikipedia.org/wiki/K-means_clustering
+http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/</p>
 
-<p>Vad erbjuder fusion table for maps, areamap, heartmap, custom border</p>
+<p>MarkerClusterer
+-what is it
+gridbased!
+-demo
+-http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html
+speed test clustering
+http://www.svennerberg.com/examples/markers/markerPerformance.html</p>
 
-<p>http://code.google.com/p/google-maps-utility-library-v3/wiki/Libraries</p>
+<p>MarkerManager
+-what is it
+-demo
+- http://google-maps-utility-library-v3.googlecode.com/svn/tags/markermanager/1.0/docs/reference.html</p>
 
-<p>http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/</p>
-
-<p>http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers</p>
-
-<p>The latter pattern is more efficient, with 1 modification.  Rather than
-creating a listener function in each call to .addListener(), create your
-listener function once and add that same listener to all markers.  Reducing
-the number of Objects like this helps older browsers especially.</p>
-
-<p>Render GIFs for IE, instead of alpha PNGs</p>
-
-<p>http://code.google.com/intl/sv-SE/apis/maps/articles/toomanymarkers.html
-These varied approaches are outlined in the following sections:
-Viewport Marker Management
-Flash
-Fusion Tables
-MarkerClusterer
-MarkerManager</p>
+<p>Marker Manager</p>
 
 <p>Serverside clustering
+-what is it
+-demo
 http://www.usda.gov/recovery/map/
 http://www.geograph.org.uk/mapper/clusters.php#ll=54.55,-3.88&amp;z=6&amp;t=p&amp;r=c
 Try ZeeMaps (http://www.zeemaps.com). We apply several heuristics to improve
@@ -394,26 +410,128 @@ the loading time when you have large number of markers. For less than 5,000
 markers we use a fast clustering algorithm, and only display visible markers.
 For more than 5,000 markers we use server-side tiling.</p>
 
-<p>Clustering techniques
-http://www.appelsiini.net/2008/11/introduction-to-marker-clustering-with-google-maps</p>
+<p>Marker light</p>
 
-<p>speed test clustering
-http://www.svennerberg.com/examples/markers/markerPerformance.html</p>
+<p>SuperMarker</p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/6">
+<p>Static view (with interaction)
+KML
+Heatmaps (gheatmap, api etc)
+Generated tiles
+FusionTable</p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/7">
+<ul>
+<li>google fusion table example
+Vad erbjuder fusion table for maps, areamap, heartmap, custom border</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/8">
+<ul>
+<li>data simplification</li>
+<li>simplify polylines</li>
+<li>fetch data more efficient</li>
+<li>slim down your protocol</li>
+<li>fetch using boundingbox</li>
+<li>divide data, overlayinfo, markerinfo</li>
+</ul>
 
-<p>http://en.wikipedia.org/wiki/K-means_clustering
-Grid-based Clustering
-Distance-based Clustering
-Grid Clustering</p>
+
+<p>http://code.google.com/intl/sv-SE/apis/maps/documentation/utilities/polylinealgorithm.html
+how to code polylines smart, rakstr&#xE4;ckor tex brezenhams?</p>
+
+<p>DOM elements, listeners js objects
+The latter pattern is more efficient, with 1 modification.  Rather than
+creating a listener function in each call to .addListener(), create your
+listener function once and add that same listener to all markers.  Reducing
+the number of Objects like this helps older browsers especially.
+Render GIFs for IE, instead of alpha PNGs
+GMarker ger 5 DOM nodes, egen div ger div med img ger 2.</p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/9">
+<h1>RANDOM STUFF?</h1>
+
+<p>http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers</p>
+
+<p>Render GIFs for IE, instead of alpha PNGs
+http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/</p>
+
+<p>http://code.google.com/intl/sv-SE/apis/maps/articles/toomanymarkers.html</p>
+
+<p>http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html</p>
+
+<p>http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/v2/mediagallery.html</p>
 
 <p>Andra delar
  - google streetview
  - google earth
- - google direction
- - om popdevelop
- - om mig/seb</p>
+ - google direction</p>
 
-<p>util librarys
-http://google-maps-utility-library-v3.googlecode.com/svn/tags/keydragzoom/</p></div>
+<ul>
+<li>om popdevelop</li>
+<li>om mig/seb</li>
+</ul>
+
+
+<p>Visa vad man kan g&#xF6;ra, ingen teknik?</p>
+
+<h1>bra exempel</h1>
+
+<h1>slutet</h1>
+
+<p>http://map.baidu.com/
+the wilderness downtown
+svenska varianten, malmo
+ android 3d maps
+http:// - mapnificient.com?
+http://www.youtube.com/watch?v=XNsrj5bE2qI
+http://www.youtube.com/watch?v=w44cdIOor7E</p>
+
+<p>http://googlemapsmania.blogspot.com/
+http://move.rmi.org/features/oilmap.html
+http://fundrace.huffingtonpost.com/
+http://maptd.com/map/earthquake<em>activity</em>vs<em>nuclear</em>power<em>plants/
+http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&amp;long=-122.44922089716879&amp;market=sanfrancisco&amp;region</em>id=17151&amp;region<em>type=6&amp;sf=1,2&amp;v=6&amp;zoomLevel=12
+http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp
+http://projects.nytimes.com/crime/homicides/map
+http://maptd.com/map/earthquake</em>activity<em>vs</em>nuclear<em>power</em>plants/
+geocoding av tweets location to state
+2210 mashups online
+http://www.programmableweb.com/api/google-maps/mashups
+heatmap
+http://boston.povo.com/Boston?heatmap&amp;query=pizza&amp;tags=pizza%2csandwiches,pasta&amp;center=42.30879983710441,-71.0595703125&amp;zoom=11</p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/1">
+<h1>Demos...</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/2">
+<h1>1</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/3">
+<h1>2</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/4">
+<h1>3</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/5">
+<h1>References, l&#xE4;nkar</h1>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/6">
+<h1>Avslut, sjuk bild</h1>
+
+<h1>Visa hemma hos popdevelop?</h1></div>
 </div>
 </div>
 
