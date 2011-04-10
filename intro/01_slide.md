@@ -1,6 +1,16 @@
 !SLIDE full-page
-# Google Maps on the web #
-## by Popdevelop 13/4 - 2011 ##
+
+# The google maps family
+* google maps
+* google earth
+* layers (kml, fusion, trafic, bicycle)
+* panoramio
+* elecvation
+* geocoding
+* streetview
+* directions
+* ad sense maps
+* transit
 
 !SLIDE full-page
 # Introduction, Google Maps V3#

@@ -1,1 +1,8 @@
-{ "name": "Google Maps &raquo; Popdevelop", "sections": [ {"section":"intro"}, {"section":"style"}, {"section":"performance"} ]}
+{ "name": "Google Maps &raquo; Popdevelop",
+        "sections": [
+        {"section":"popdevelop"},
+        {"section":"intro"},
+        {"section":"style"},
+        {"section":"performance"},
+        {"section":"wrapup"}
+        ]}
