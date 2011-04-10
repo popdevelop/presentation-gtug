@@ -2,12 +2,14 @@
 # Styling Google maps #
 Unstyled is pretty boring...
 
+
 !SLIDE full-page
 # Custom marker #
 By using Googles [Custom Overlay Class](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing) 
 we can create our own marker using any HTML/CSS we want
 
 ![Custom marker](../img/custom_marker.png)
+
 
 !SLIDE full-page
 # Custom tiles #
@@ -100,3 +102,8 @@ This is what google maps can look like
     },
     ...
 Try it at [Google custom style wizard](http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html "Wizard")
+
+
+!SLIDE full-page
+# Styling controls #
+* Map controls can be customized

@@ -20,6 +20,7 @@
 * Works well in mobile devices (webkit)
 * License?
 
+
 !SLIDE full-page incremental
 # GIS Basics
 ## Tiles ##
@@ -31,6 +32,7 @@
   - Points
   - LineString
   - PolyLine
+
 
 !SLIDE full-page
 # Google Maps basics #
@@ -44,6 +46,7 @@
 `var map = new google.maps.Map(<DOM Element>, { ... });`
 
 * Control width/height with CSS
+
 
 !SLIDE full-page googlemap
 # Standard Google map #
