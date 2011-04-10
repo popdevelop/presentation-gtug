@@ -24,13 +24,6 @@ This is what google maps can look like
 <div class="gmaps"><div id="canvas2"></div></div>
 <script>
 (function() {
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
-  var myOptions = {
-      zoom: 8,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
   var theme = [
     {
       featureType: "water",
@@ -70,12 +63,12 @@ This is what google maps can look like
   ]
   var style = new google.maps.StyledMapType(theme, { name: "hellokitty"});
 
-  var map = new google.maps.Map(document.getElementById("canvas2"), myOptions);
+  var map = new google.maps.Map(document.getElementById("canvas2"), Gmap.Options());
   map.mapTypes.set('hellokitty', style);
   map.setMapTypeId('hellokitty');
   $('.googlemap2').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
-    map.setCenter(latlng);
+    map.setCenter(Gmap.LatLng());
   });
 }());
 </script>

@@ -56,6 +56,10 @@ h3 { font-size: 24px; }
     height: 768px;
 }
 
+.slide {
+    margin-top: -80px;
+}
+
 
 /* Google maps */
 #preso img,
