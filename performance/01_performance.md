@@ -1,12 +1,8 @@
 !SLIDE full-page
-# Performance #
-### Handling a lot of data (or "getting hardcore") ###
+# 3. Performance #
+- Handling a lot of data!
 
-
-!SLIDE full-page
-
-
-<!---
+<!--
 How do you handle 30 000 markers on a maps?
 How do you handle highres lines or data heavy applications?
 
@@ -20,12 +16,12 @@ the map to be draggable
 
 # Why?
 
+* Too many markers on the map
+* Marker rendering is slow
+* To much data, load time
+* Many js-objects or DOM elements
+* Usability problem
 
-* to many markers on map
-* marker rendering speed
-* to much data, load time
-* to many javascript objects or dom elements
-* usability problem
 ### (byt mot bild med massa markers, eller demo?)
 
 <!--
@@ -50,8 +46,8 @@ how do you measure it, find problems
 
 # Measure it
  * Chrome developer tools or Firebug
-  * network time for request
-  * profiling, function calls
+   * Network time for request
+   * Profiling, function calls
  * http://jsperf.com/browse
  * Online Marker tests
  * Try different browsers
@@ -67,18 +63,17 @@ how do you measure it, find problems
 
 !SLIDE full-page
 
-# Bild Grid-based Clustering
-# Bild Area Clustrering
-# Bild K-means clustering
-
-[Handle large amounts if markers in google maps](http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/)
-[K-means clustering](http://en.wikipedia.org/wiki/K-means_clustering)
-[Clustering basics](http://home.dei.polimi.it/matteucc/Clustering/tutorial_html/)
+* Bild Grid-based Clustering
+* Bild Area Clustering
+* Bild Distance based clustering
+* [Handle large amounts if markers in google maps](http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/)
+* [K-means clustering](http://en.wikipedia.org/wiki/K-means_clustering)
+* [Clustering basics](http://home.dei.polimi.it/matteucc/Clustering/tutorial_html/)
 
 <!--
-* clustering
-  * client side clustering
-  * server side clustering
+# Clustering
+  * Client side clustering
+  * Server side clustering
 
 - Beratta att det finns lite olika tekniker, visa bilder lite snabbt
 Often distance-based Clusteringm but attributes works good also
@@ -111,21 +106,20 @@ demo
 
 !SLIDE full-page
 
-
 * MarkerClusterer
 * MarkerManager
 * Supermarker
 * Markerlight
-[MarkerTest, inline](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
-
-[Speed test clustering](http://www.svennerberg.com/examples/markers/markerPerformance.html)
-[To many Markers by Google](http://code.google.com/intl/sv-SE/apis/maps/articles/toomanymarkers.html)
-[SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
+* References
+  * [MarkerTest, inline](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
+  * [Speed test clustering](http://www.svennerberg.com/examples/markers/markerPerformance.html)
+  * [Too many Markers by Google](http://code.google.com/intl/sv-SE/apis/maps/articles/toomanymarkers.html)
+  * [SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
 
 !SLIDE full-page
 
 
-Serverside clustering
+# Server Side clustering
 <!--
 what is it
 why and when?
@@ -137,12 +131,12 @@ http://www.usda.gov/recovery/map/
 
 !SLIDE full-page
 
-# Static Layers
+# Add Layers
 * Generated tiles
 * Heatmaps (gheatmap, api etc)
 * FusionTable
 * KML
-(Som bilder?)
+* (Som bilder?)
 
 <!--
 Generated tiles, how? tile server?
@@ -150,7 +144,8 @@ Generated tiles, how? tile server?
 
 !SLIDE full-page
 
-Google Fusion Table (Beta!)
+# Google Fusion Table (Beta!)
+
 <!--
 google fusion table example
 Vad erbjuder fusion table for maps
@@ -161,12 +156,12 @@ sql-like api from your javascript!
 
 !SLIDE full-page
 
-* data simplification
-* simplify polylines
-* fetch data more efficient
- * slim down your protocol
- * fetch using boundingbox
- * divide data, overlayinfo, markerinfo
+# Data simplification
+* Simplify polylines
+* Fetch data more efficient
+  * Slim down your protocol
+  * Fetch using boundingbox
+  * Divide data, overlayinfo, markerinfo
 
 <!--
 
@@ -186,17 +181,16 @@ Render GIFs for IE, instead of alpha PNGs
 
 !SLIDE full-page
 
-http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/v2/mediagallery.html
+# bra exempel, flytta var?
 
-# bra exempel
-
-[Custom tiles?](https:////maptd.com/map/earthquake_activity_vs_nuclear_power_plants/)
-http://googlemapsmania.blogspot.com/
-http://move.rmi.org/features/oilmap.html
-http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
-http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&long=-122.44922089716879&market=sanfrancisco&region_id=17151&region_type=6&sf=1,2&v=6&zoomLevel=12
-http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp
-http://projects.nytimes.com/crime/homicides/map
-http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
-http://boston.povo.com/Boston?heatmap&query=pizza&tags=pizza%2csandwiches,pasta&center=42.30879983710441,-71.0595703125&zoom=11
+* [Custom tiles?](https:////maptd.com/map/earthquake_activity_vs_nuclear_power_plants/)
+* [Google Maps Mania](http://googlemapsmania.blogspot.com/)
+* [Goole Maps Media gallery](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/v2/mediagallery.html)
+* [1](http://move.rmi.org/features/oilmap.html)
+* [2](http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/)
+* http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&long=-122.44922089716879&market=sanfrancisco&region_id=17151&region_type=6&sf=1,2&v=6&zoomLevel=12
+* http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp
+* http://projects.nytimes.com/crime/homicides/map
+* http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
+* http://boston.povo.com/Boston?heatmap&query=pizza&tags=pizza%2csandwiches,pasta&center=42.30879983710441,-71.0595703125&zoom=11
 
