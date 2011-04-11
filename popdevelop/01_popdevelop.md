@@ -1,6 +1,6 @@
 !SLIDE full-page
 # Google Maps on the web #
-## by Popdevelop 13/4 - 2011 ##
+### by Popdevelop 13/4 - 2011 ###
 
 !SLIDE full-page
 

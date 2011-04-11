@@ -16,6 +16,9 @@ body {
     border-bottom: 2px solid #6D4927;
 }
 
+#preso .highlight {
+    color: #8b0000;
+}
 
 /* Style for individual slides */
 #preso .features img {
@@ -99,16 +102,12 @@ h3 { font-size: 24px; }
     width: 640px;
     height: 410px;
 }
-.gmaps #canvas,
-.gmaps #canvas2,
-.gmaps #canvas3 {
+#preso .gmaps > div {
     height: 410px;
     box-shadow: none;
 }
 
-.gmaps #canvas img,
-.gmaps #canvas2 img,
-.gmaps #canvas3 img {
+#preso .gmaps > div img {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

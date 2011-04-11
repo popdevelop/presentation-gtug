@@ -1,6 +1,6 @@
 !SLIDE full-page
 # Styling Google maps #
-Unstyled is pretty boring...
+### Unstyled is pretty boring... ###
 
 
 !SLIDE full-page
@@ -118,6 +118,7 @@ Try it at [Google custom style wizard](http://gmaps-samples-v3.googlecode.com/sv
 # Example: own zoom buttons #
 <button id="zoomin">Zoom in</button>
 <button id="zoomout">Zoom out</button>
+<button id="gowest">Go west!</button>
 <div class="gmaps"><div id="canvas3"></div></div>
 <script>
 (function() {
@@ -129,5 +130,10 @@ Try it at [Google custom style wizard](http://gmaps-samples-v3.googlecode.com/sv
   });
   $('#zoomin').click(function() { map.setZoom(++zoom); })
   $('#zoomout').click(function() { map.setZoom(--zoom); })
+  $('#gowest').click(function() {
+    var p = map.getCenter();
+    var c = new google.maps.LatLng(p.lat(), p.lng() - 0.1);
+    map.setCenter(c);
+  });
 }());
 </script>

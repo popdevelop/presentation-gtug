@@ -1,16 +1,33 @@
 !SLIDE full-page family
 
 # The google maps family
-* google maps
-* google earth
-* layers (kml, fusion, trafic, bicycle)
-* panoramio
-* elevation
-* geocoding
-* streetview
-* directions
-* ad sense maps
-* transit
+## APIs ##
+* <span id="jsapi">Maps Javascript</span>
+* Maps Flash
+* Static Maps
+* Google Earth
+
+## Web services ##
+* Geocoding
+* Directions
+* Elevation
+* Places
+* Ad sense maps
+* Transit
+
+<script>
+(function() {
+var next = false;
+$('.family').bind('showoff:next', function(e) {
+  if(next) return true;
+  $('#jsapi').addClass('highlight');
+  Cufon.refresh();
+  e.preventDefault();
+  next = true;
+  return false;
+});
+}());
+</script>
 
 !SLIDE full-page
 # Introduction, Google Maps V3#
@@ -19,6 +36,7 @@
 * Optimized "bootstrap" process
 * Works well in mobile devices (webkit)
 
+(demo in iOS simulator)
 
 !SLIDE full-page incremental
 # GIS Basics gis
@@ -66,11 +84,11 @@ Google maps has quite alot of built in features ready to be used. Here are a few
 ![Marker](../img/google-marker.jpeg)
 ![Infowindow](../img/infowindow.png)
 ![Polygons](../img/polygon.png)
-## Marker ##
+### Marker ###
 `var marker = new google.maps.Marker({...});`
-## Info Window ##
-`var infowindow = new google.maps.InfoWindow({});`
-## Circles/Rectangles ##
+### Info Window ###
+`var info = new google.maps.InfoWindow({...});`
+### Circles/Rectangles/Polygons ###
 `var cicle = new google.maps.Circle({...});`
 
 ### See them all at [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
