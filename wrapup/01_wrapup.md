@@ -33,9 +33,6 @@ framborder="0"></iframe>
 !SLIDE full-page
 
 ### [Isometric China Style](http://bit.ly/fpzq1Q)
-<iframe title="Mapnificent Trip Planing" width="640" height="410"
-src="http://bit.ly/fpzq1Q"
-framborder="0"></iframe>
 
 !SLIDE full-page
 

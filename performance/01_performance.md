@@ -142,9 +142,43 @@ http://www.usda.gov/recovery/map/
 Generated tiles, how? tile server?
 -->
 
-!SLIDE full-page
+!SLIDE full-page googlemap
+# Standard Google map #
+This is what you get!
+<div class="gmaps"><div id="perf1_canvas"></div></div>
+<script>
+  var map = new google.maps.Map(document.getElementById("perf1_canvas"), Gmap.Options());
+  $('.googlemap').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+</script>
+
+
+!SLIDE full-page googlemap
 
 # Google Fusion Table (Beta!)
+
+<div class="gmaps"><div id="perf2_canvas"></div></div>
+<script>
+  var tableid_1 = 628739;
+  var tableid_2 = 685404;
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf2_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  layer_1 = new google.maps.FusionTablesLayer(tableid_1);
+  layer_1.setQuery("SELECT * FROM " + tableid_1);
+  layer_1.setMap(map);
+
+  layer_2 = new google.maps.FusionTablesLayer(tableid_2);
+  layer_2.setMap(map);
+</script>
 
 <!--
 google fusion table example
