@@ -36,7 +36,7 @@ the map to be draggable
 
 # Knuth?
 
-[Root of all evil]("http://1.bp.blogspot.com/-y-_eIBHKK7Q/TVlo4Zrw9XI/AAAAAAAAHOM/IUziLpXoOZ4/s1600/premature-6%255B1%255D.jpg")
+[Root of all evil](rootevil.jpg)
 
 <!--
 how do you measure it, find problems
