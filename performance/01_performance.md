@@ -16,13 +16,16 @@ the map to be draggable
 
 # Why?
 
+![Uncluster Image](uncluster.jpg)
+
+(livedemo, markers)
+<!--
 * Too many markers on the map
 * Marker rendering is slow
 * To much data, load time
 * Many js-objects or DOM elements
 * Usability problem
-
-### (byt mot bild med massa markers, eller demo?)
+-->
 
 <!--
 # Solution? Depends on reqs?
@@ -36,7 +39,7 @@ the map to be draggable
 
 # Knuth?
 
-[Root of all evil](rootevil.jpg)
+![Root of all evil](rootevil.jpg)
 
 <!--
 how do you measure it, find problems
@@ -58,17 +61,21 @@ how do you measure it, find problems
 
 !SLIDE full-page
 
-# Sida eller Bild before,after clustering
-[Cluster Image](http://media.svennerberg.com/2008/12/unclustered.jpg)
+# Clustering
+![Before Cluster](uncluster.jpg)
+![After Cluster](cluster2.jpg)
 
+<!--
+Images by Martin Pearman, http://googlemapsapi.martinpearman.co.uk/
+-->
 !SLIDE full-page
 
-* Bild Grid-based Clustering
-* Bild Area Clustering
-* Bild Distance based clustering
-* [Handle large amounts if markers in google maps](http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/)
+# Clustering
+* Grid-based Clustering
+* Area Clustering
+* Distance based clustering
 * [K-means clustering](http://en.wikipedia.org/wiki/K-means_clustering)
-* [Clustering basics](http://home.dei.polimi.it/matteucc/Clustering/tutorial_html/)
+* [Article: Clustering basics](http://home.dei.polimi.it/matteucc/Clustering/tutorial_html/)
 
 <!--
 # Clustering
@@ -82,6 +89,9 @@ Often distance-based Clusteringm but attributes works good also
 !SLIDE full-page
 
 # MarkerClusterer
+
+![MarkerClusterer](markerclusterer.jpg)
+
 [MarkerClusterer by google](http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html)
 
 <!--
@@ -89,6 +99,7 @@ all of you have probably seen this
 what is it
 settings
 gridbased!
+clientside
 demo
 -->
 
@@ -102,24 +113,13 @@ MarkerManager
 what is it
 settings
 demo
+clientside
 -->
 
 !SLIDE full-page
 
-* MarkerClusterer
-* MarkerManager
-* Supermarker
-* Markerlight
-* References
-  * [MarkerTest, inline](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
-  * [Speed test clustering](http://www.svennerberg.com/examples/markers/markerPerformance.html)
-  * [Too many Markers by Google](http://code.google.com/intl/sv-SE/apis/maps/articles/toomanymarkers.html)
-  * [SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
 
-!SLIDE full-page
-
-
-# Server Side clustering
+# Server Side Clustering
 <!--
 what is it
 why and when?
@@ -128,32 +128,29 @@ hitta bra exempel!
 http://www.usda.gov/recovery/map/
 -->
 
+!SLIDE full-page
+
+# Performance Tips
+
+* Supermarker
+* Markerlight
+* [Marker Test 1](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
+* [Marker Test 2](http://www.svennerberg.com/examples/markers/markerPerformance.html)
+* [SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
+
 
 !SLIDE full-page
 
 # Add Layers
 * Generated tiles
-* Heatmaps (gheatmap, api etc)
+* Heatmaps
 * FusionTable
 * KML
-* (Som bilder?)
 
 <!--
+FIXME: read heatmap api exmaple, visa
 Generated tiles, how? tile server?
 -->
-
-!SLIDE full-page googlemap
-# Standard Google map #
-This is what you get!
-<div class="gmaps"><div id="perf1_canvas"></div></div>
-<script>
-  var map = new google.maps.Map(document.getElementById("perf1_canvas"), Gmap.Options());
-  $('.googlemap').bind("showoff:show", function() {
-    google.maps.event.trigger(map, 'resize');
-    map.setCenter(Gmap.LatLng());
-  });
-</script>
-
 
 !SLIDE full-page googlemap
 
@@ -172,12 +169,12 @@ This is what you get!
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
 
-  layer_1 = new google.maps.FusionTablesLayer(tableid_1);
+  var layer_1 = new google.maps.FusionTablesLayer(tableid_1);
   layer_1.setQuery("SELECT * FROM " + tableid_1);
   layer_1.setMap(map);
 
-  layer_2 = new google.maps.FusionTablesLayer(tableid_2);
   layer_2.setMap(map);
+  var layer_2 = new google.maps.FusionTablesLayer(tableid_2);
 </script>
 
 <!--
@@ -222,9 +219,11 @@ Render GIFs for IE, instead of alpha PNGs
 * [Goole Maps Media gallery](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/v2/mediagallery.html)
 * [1](http://move.rmi.org/features/oilmap.html)
 * [2](http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/)
-* http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&long=-122.44922089716879&market=sanfrancisco&region_id=17151&region_type=6&sf=1,2&v=6&zoomLevel=12
-* http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp
+* [3](http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&long=-122.44922089716879&market=sanfrancisco&region_id=17151&region_type=6&sf=1,2&v=6&zoomLevel=12)
+* [4](http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp)
+<!--
 * http://projects.nytimes.com/crime/homicides/map
 * http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
 * http://boston.povo.com/Boston?heatmap&query=pizza&tags=pizza%2csandwiches,pasta&center=42.30879983710441,-71.0595703125&zoom=11
+-->
 
