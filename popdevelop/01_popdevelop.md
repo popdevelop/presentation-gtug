@@ -11,10 +11,12 @@
 * Background from embedded
 * Now into web
 
-
 !SLIDE full-page work
 
 # Some of our work
 
 * [kollektivt.se](http://kollektivt.se) - Bus visualisation
 * [taglaget.nu](http://taglaget.nu) - Train visualisation
+<!-- Mer?
+Dogvibes, Consulting embedded, Consulting web, Iphone utveckling, Arduino
+-->

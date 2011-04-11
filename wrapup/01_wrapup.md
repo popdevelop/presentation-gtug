@@ -1,4 +1,5 @@
 !SLIDE full-page
+
 # 4. Demos...
 
 !SLIDE full-page
@@ -19,7 +20,6 @@ allowfullscreen></iframe>
 <iframe title="Mapnificent Trip Planing" width="640" height="410"
 src="http://www.mapnificent.net/torino/#/?lat0=45.061105116935906&lng0=7.713054452050756&t0=15"
 framborder="0"></iframe>
-
 
 !SLIDE full-page
 #Isometric Maps?
@@ -48,9 +48,7 @@ allowfullscreen></iframe>
 
 #References, länkar
 
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
+### [Add all links here](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
 ### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
 ### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
 ### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
@@ -61,6 +59,12 @@ allowfullscreen></iframe>
 
 !SLIDE full-page
 
-#Avslut, sjuk bild
+* [http://popdevelop.com](http://popdevelop.com)
+* [http://twitter.com/popdevelop](http://twitter.com/popdevelop)
+* [http://www.youtube.com/popdevelop](http://www.youtube.com/popdevelop)
+* [http://flickr.com/popdevelop](http://flickr.com/popdevelop)
+* [http://github.com/popdevelop](http://popdevelop.github.com/FIXME)
+
 #Visa hemma hos popdevelop?
+<!-- FIXME LINKS -->
 
