@@ -4,14 +4,17 @@
 
 !SLIDE full-page
 
-# Om popdevelop
+# About Popdevelop
 
-# Om oss två, roliga bilder
-
-# Kanske filmen
-
-!SLIDE full-page
-
-# vad har vi gjort
+* Started in January 2011
+* Four nerds
+* Background from embedded
+* Now into web
 
 
+!SLIDE full-page work
+
+# Some of our work
+
+* [kollektivt.se](http://kollektivt.se) - Bus visualisation
+* [taglaget.nu](http://taglaget.nu) - Train visualisation

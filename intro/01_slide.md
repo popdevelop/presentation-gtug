@@ -1,11 +1,11 @@
-!SLIDE full-page
+!SLIDE full-page family
 
 # The google maps family
 * google maps
 * google earth
 * layers (kml, fusion, trafic, bicycle)
 * panoramio
-* elecvation
+* elevation
 * geocoding
 * streetview
 * directions
@@ -18,17 +18,16 @@
 * Completely re-written from V2
 * Optimized "bootstrap" process
 * Works well in mobile devices (webkit)
-* License?
 
 
 !SLIDE full-page incremental
-# GIS Basics
-## Tiles ##
+# GIS Basics gis
+## Image tiles ##
   - Bitmap images
   - For all zoom levels
   - Non-interactive
 
-## Feature primitives ##
+## Primitives ##
   - Points
   - LineString
   - PolyLine
@@ -60,9 +59,13 @@ This is what you get!
   });
 </script>
 
-!SLIDE full-page
+!SLIDE full-page features
 # Some Google maps features
 Google maps has quite alot of built in features ready to be used. Here are a few:
+<br>
+![Marker](../img/google-marker.jpeg)
+![Infowindow](../img/infowindow.png)
+![Polygons](../img/polygon.png)
 ## Marker ##
 `var marker = new google.maps.Marker({...});`
 ## Info Window ##

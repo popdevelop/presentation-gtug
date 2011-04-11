@@ -10,13 +10,15 @@ we can create our own marker using any HTML/CSS we want
 
 ![Custom marker](../img/custom_marker.png)
 
+### Example from [taglaget.nu](http://taglaget.nu) ###
 
 !SLIDE full-page
 # Custom tiles #
-* Allows control of map features
-* Allows simplification of features
-* Allows control of map colors
+### From [may 2010](http://googlegeodevelopers.blogspot.com/2010/05/add-touch-of-style-to-your-maps.html) Google allows styling of their tiles: ###
 
+* Control of map features
+* Simplification of features
+* Control of map colors
 
 !SLIDE full-page googlemap2
 # Here we go! #
@@ -63,7 +65,7 @@ This is what google maps can look like
   ]
   var style = new google.maps.StyledMapType(theme, { name: "hellokitty"});
 
-  var map = new google.maps.Map(document.getElementById("canvas2"), Gmap.Options());
+  var map = new google.maps.Map(document.getElementById("canvas2"), Gmap.OptionsUI());
   map.mapTypes.set('hellokitty', style);
   map.setMapTypeId('hellokitty');
   $('.googlemap2').bind("showoff:show", function() {
@@ -74,6 +76,7 @@ This is what google maps can look like
 </script>
 
 !SLIDE full-page
+
 # Style notation #
     @@@ javascript
     {
@@ -98,5 +101,33 @@ Try it at [Google custom style wizard](http://gmaps-samples-v3.googlecode.com/sv
 
 
 !SLIDE full-page
-# Styling controls #
-* Map controls can be customized
+# Custom controls #
+
+* Default controls can be turned off
+
+`disableDefaultUI: true /* in init-options */`
+
+* Map can be controlled programatically
+
+`map.setCenter(<LatLng>);`
+`map.setZoom(<integer>);`
+
+* Make your own controls with HTML/JS
+
+!SLIDE full-page googlemap3
+# Example: own zoom buttons #
+<button id="zoomin">Zoom in</button>
+<button id="zoomout">Zoom out</button>
+<div class="gmaps"><div id="canvas3"></div></div>
+<script>
+(function() {
+  var map = new google.maps.Map(document.getElementById("canvas3"), Gmap.OptionsUI());
+  var zoom = map.getZoom();
+  $('.googlemap3').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+  $('#zoomin').click(function() { map.setZoom(++zoom); })
+  $('#zoomout').click(function() { map.setZoom(--zoom); })
+}());
+</script>
