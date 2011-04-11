@@ -149,13 +149,6 @@ Visa vad man kan göra, ingen teknik?
 
 # slutet
 
-http://map.baidu.com/
-the wilderness downtown
-svenska varianten, malmo
- android 3d maps
-http:// - mapnificient.com?
-http://www.youtube.com/watch?v=XNsrj5bE2qI
-http://www.youtube.com/watch?v=w44cdIOor7E
 
 http://googlemapsmania.blogspot.com/
 http://move.rmi.org/features/oilmap.html
