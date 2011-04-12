@@ -26,4 +26,4 @@ allowfullscreen>
 
 * [kollektivt.se](http://kollektivt.se) - Bus visualisation
 * [taglaget.nu](http://taglaget.nu) - Train visualisation
-* Web, Linux Embedded and iPhone development
+* Web, Linux Embedded and iPhone

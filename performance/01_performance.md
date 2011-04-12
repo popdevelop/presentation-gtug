@@ -207,7 +207,7 @@ demo
 
 !SLIDE full-page
 
-#MarkerManager
+#MarkerManager (FIXA BILD)
 [MarkerManger by google](http://google-maps-utility-library-v3.googlecode.com/svn/tags/markermanager/1.0/docs/reference.html)
 
 <!--
