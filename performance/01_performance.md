@@ -354,11 +354,6 @@ Render GIFs for IE, instead of alpha PNGs
 GMarker ger 5 DOM nodes, egen div ger div med img ger 2.
 
 Render GIFs for IE, instead of alpha PNGs
--->
-
-!SLIDE full-page
-
-# bra exempel, flytta var?
 
 * [Custom tiles?](https:////maptd.com/map/earthquake_activity_vs_nuclear_power_plants/)
 * [Google Maps Mania](http://googlemapsmania.blogspot.com/)
@@ -367,7 +362,6 @@ Render GIFs for IE, instead of alpha PNGs
 * [2](http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/)
 * [3](http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&long=-122.44922089716879&market=sanfrancisco&region_id=17151&region_type=6&sf=1,2&v=6&zoomLevel=12)
 * [4](http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp)
-<!--
 * http://projects.nytimes.com/crime/homicides/map
 * http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
 * http://boston.povo.com/Boston?heatmap&query=pizza&tags=pizza%2csandwiches,pasta&center=42.30879983710441,-71.0595703125&zoom=11
