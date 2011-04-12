@@ -1,6 +1,6 @@
 !SLIDE full-page
 
-# 4. Demos...
+# 4. Demos...(FIXA BILD)
 
 !SLIDE full-page
 
@@ -48,6 +48,6 @@ allowfullscreen></iframe>
 * [http://popdevelop.com](http://popdevelop.com)
 * [http://twitter.com/popdevelop](http://twitter.com/popdevelop)
 * [http://www.youtube.com/popdevelop](http://www.youtube.com/popdevelop)
-* [http://flickr.com/popdevelop](http://flickr.com/popdevelop)
-* [http://github.com/popdevelop](http://popdevelop.github.com/FIXME)
+* [http://flickr.com/popdevelop](http://www.flickr.com/photos/56096350@N02)
+* [http://github.com/popdevelop](http://www.github.com/popdevelop)
 
