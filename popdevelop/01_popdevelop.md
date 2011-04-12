@@ -1,9 +1,13 @@
-!SLIDE full-page
+!SLIDE center light-on-dark
+![background](../img/google-maps-intro.jpg)
 # Google Maps on the web #
 ### by Popdevelop 13/4 - 2011 ###
 
-!SLIDE full-page
+!SLIDE center light-on-dark
+![background](../img/google-maps-intro.jpg)
+# 1. Popdevelop #
 
+!SLIDE full-page
 # About Popdevelop
 
 * Started in January 2011

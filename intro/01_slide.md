@@ -1,6 +1,6 @@
 !SLIDE center light-on-dark
 ![background](../img/google-maps-intro.jpg)
-# Google maps #
+# 2. Google maps #
 
 !SLIDE full-page family
 
