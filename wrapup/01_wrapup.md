@@ -26,13 +26,20 @@ framborder="0">
 !SLIDE full-page
 #Isometric Maps?
 
-!SLIDE full-page
+!SLIDE full-page iso
 
 # [Isometric Popdevelop Style](http://sewa.se/isometric/)
-<iframe title="Mapnificent Trip Planing" width="640" height="410"
-src="http://sewa.se/isometric"
-framborder="0">
+<iframe class="isometric" title="Isometric sewa" width="640" height="410" framborder="0">
 </iframe>
+
+<script>
+(function() {
+  var iso = $('.isometric');
+  $('.iso').bind("showoff:show", function() {
+    iso.attr('src', "http://sewa.se/isometric");
+  });
+}());
+</script>
 
 !SLIDE full-page
 
@@ -49,9 +56,16 @@ allowfullscreen>
 
 !SLIDE full-page
 
+# Thanks
+
+### [http://popdevelop.github.com/presentation-gtug/](http://popdevelop.github.com/presentation-gtug/)
+
+
 * [http://popdevelop.com](http://popdevelop.com)
 * [http://twitter.com/popdevelop](http://twitter.com/popdevelop)
 * [http://www.youtube.com/popdevelop](http://www.youtube.com/popdevelop)
 * [http://flickr.com/popdevelop](http://www.flickr.com/photos/56096350@N02)
 * [http://github.com/popdevelop](http://www.github.com/popdevelop)
+
+
 
