@@ -9,6 +9,27 @@ $(document).ready(function() {
   }, 400);
 });
 
+
+$(function() {
+  $('div.content').live('showoff:show', function(evt) {
+    var bg_img = $('img[alt=background]', evt.target);
+    if (bg_img.size() > 0) {
+      var src = bg_img.attr('src');
+      bg_img.hide();
+      
+      // Set new background on body
+      $('body')
+        .css('background', 'url(' + src + ') no-repeat center center fixed')
+        .css('-webkit-background-size', 'cover')
+        .css('-moz-background-size', 'cover')
+        .css('-o-background-size', 'cover')
+        .css('background-size', 'cover');
+    } else {
+      $('body').css('background-image', '');
+    }
+  });
+});
+
 var Gmap = {
   LatLng: function() {
     return new google.maps.LatLng(55.588047, 13.000946);

@@ -80,8 +80,10 @@ h3 { font-size: 24px; }
     height: 768px;
 }
 
-.slide {
-    margin-top: -30px;
+#preso, .slide {
+  background-color: transparent !important;
+  border: none !important;
+  margin-top: -30px;
 }
 
 
