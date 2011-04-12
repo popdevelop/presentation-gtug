@@ -55,18 +55,16 @@ src="http://www.youtube.com/embed/w44cdIOor7E#t=1m5s" frameborder="0"
 allowfullscreen>
 </iframe>
 
-!SLIDE full-page
+!SLIDE full-page thanks
 
 # Thanks
 
-### [http://popdevelop.github.com/presentation-gtug/](http://popdevelop.github.com/presentation-gtug/)
-
-
-* [http://popdevelop.com](http://popdevelop.com)
-* [http://twitter.com/popdevelop](http://twitter.com/popdevelop)
-* [http://www.youtube.com/popdevelop](http://www.youtube.com/popdevelop)
-* [http://flickr.com/popdevelop](http://www.flickr.com/photos/56096350@N02)
-* [http://github.com/popdevelop](http://www.github.com/popdevelop)
+* [popdevelop.github.com/presentation-gtug/](http://popdevelop.github.com/presentation-gtug/)
+* [popdevelop.com](http://popdevelop.com)
+* [twitter.com/popdevelop](http://twitter.com/popdevelop)
+* [www.youtube.com/popdevelop](http://www.youtube.com/popdevelop)
+* [flickr.com/popdevelop](http://www.flickr.com/photos/56096350@N02)
+* [github.com/popdevelop](http://www.github.com/popdevelop)
 
 
 

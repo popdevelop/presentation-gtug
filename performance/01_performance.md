@@ -15,6 +15,7 @@ How do you handle highres lines or data heavy applications?
 this case for the map to be rendered
 * page ready time - how long it takes for the page to become usable, e.g. for
 the map to be draggable
+
 -->
 
 !SLIDE full-page googlemap_perf1
@@ -95,6 +96,7 @@ the map to be draggable
 
 <!--
 how do you measure it, find problems
+
 -->
 
 !SLIDE full-page
@@ -119,6 +121,12 @@ how do you measure it, find problems
 
 <!--
 Images by Martin Pearman, http://googlemapsapi.martinpearman.co.uk/
+
+a few techniques
+
+first clustering
+
+what is it
 -->
 !SLIDE full-page
 
