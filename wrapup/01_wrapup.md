@@ -11,7 +11,8 @@
 # 3D-maps for Android?
 <iframe title="YouTube video player" width="640" height="410"
 src="http://www.youtube.com/embed/TAh4yiCzgKw" frameborder="0"
-allowfullscreen></iframe>
+allowfullscreen>
+</iframe>
 ### [Google Maps 5.0 for Android](http://www.google.com/mobile/maps/3d/)
 
 !SLIDE full-page
@@ -19,7 +20,8 @@ allowfullscreen></iframe>
 # [Mapnificent Trip Planing](http://www.mapnificent.net/torino/#/?lat0=45.061105116935906&lng0=7.713054452050756&t0=15)
 <iframe title="Mapnificent Trip Planing" width="640" height="410"
 src="http://www.mapnificent.net/torino/#/?lat0=45.061105116935906&lng0=7.713054452050756&t0=15"
-framborder="0"></iframe>
+framborder="0">
+</iframe>
 
 !SLIDE full-page
 #Isometric Maps?
@@ -29,7 +31,8 @@ framborder="0"></iframe>
 # [Isometric Popdevelop Style](http://sewa.se/isometric/)
 <iframe title="Mapnificent Trip Planing" width="640" height="410"
 src="http://sewa.se/isometric"
-framborder="0"></iframe>
+framborder="0">
+</iframe>
 
 !SLIDE full-page
 
@@ -41,7 +44,8 @@ framborder="0"></iframe>
 
 <iframe title="YouTube video player" width="640" height="410"
 src="http://www.youtube.com/embed/w44cdIOor7E#t=1m5s" frameborder="0"
-allowfullscreen></iframe>
+allowfullscreen>
+</iframe>
 
 !SLIDE full-page
 

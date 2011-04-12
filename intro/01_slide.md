@@ -47,8 +47,9 @@ $('.family').bind('showoff:next', function(e) {
 * UI blocks
 
 ## Enhancements ##
-* Optimized "bootstrap" process
+* Static pre-map for better UX
 * More modular design
+* Optimized "bootstrap" process
 * Lower latency
 
 !SLIDE full-page incremental
@@ -81,7 +82,10 @@ $('.family').bind('showoff:next', function(e) {
 !SLIDE full-page googlemap
 # Standard Google map #
 This is what you get!
-<div class="gmaps"><div id="canvas"></div></div>
+<div class="gmaps">
+  <div id="canvas">
+  </div>
+</div>
 <script>
 (function() {
   var map = new google.maps.Map(document.getElementById("canvas"), Gmap.Options());

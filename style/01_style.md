@@ -23,7 +23,10 @@ we can create our own marker using any HTML/CSS we want
 !SLIDE full-page googlemap2
 # Here we go! #
 This is what google maps can look like
-<div class="gmaps"><div id="canvas2"></div></div>
+<div class="gmaps">
+  <div id="canvas2">
+  </div>
+</div>
 <script>
 (function() {
   var theme = [
@@ -119,7 +122,10 @@ Try it at [Google custom style wizard](http://gmaps-samples-v3.googlecode.com/sv
 <button id="zoomin">Zoom in</button>
 <button id="zoomout">Zoom out</button>
 <button id="gowest">Go west!</button>
-<div class="gmaps"><div id="canvas3"></div></div>
+<div class="gmaps">
+  <div id="canvas3">
+  </div>
+</div>
 <script>
 (function() {
   var map = new google.maps.Map(document.getElementById("canvas3"), Gmap.OptionsUI());

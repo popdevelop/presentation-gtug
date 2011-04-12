@@ -18,7 +18,10 @@ the map to be draggable
 
 <button id="addmarkers">Add 100 Markers</button>
 <button id="clearmarkers">Clear Markers</button>
-<div class="gmaps"><div id="perf1_canvas"></div></div>
+<div class="gmaps">
+  <div id="perf1_canvas">
+  </div>
+</div>
 
 <script>
 (function() {
@@ -144,7 +147,10 @@ Often distance-based Clusteringm but attributes works good also
 
 <button id="addmarkerscluster">Add 100 Markers with MarkerClusterer</button>
 <button id="clearmarkerscluster">Clear Markers</button>
-<div class="gmaps"><div id="perf2_canvas"></div></div>
+<div class="gmaps">
+  <div id="perf2_canvas">
+  </div>
+</div>
 
 <script>
 (function() {
@@ -255,7 +261,10 @@ framborder="0"></iframe>
 
 # KML
 
-<div class="gmaps"><div id="perf3_canvas"></div></div>
+<div class="gmaps">
+  <div id="perf3_canvas">
+  </div>
+</div>
 <script>
 (function() {
   var zoom = 5;
@@ -284,7 +293,10 @@ framborder="0"></iframe>
 !SLIDE full-page googlemap_perf4
 
 # Google Fusion Table (Beta!)
-<div class="gmaps"><div id="perf4_canvas"></div></div>
+<div class="gmaps">
+  <div id="perf4_canvas">
+  </div>
+</div>
 <script>
 (function() {
   var tableid_1 = 628739;

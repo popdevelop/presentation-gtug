@@ -17,7 +17,8 @@
 
 <iframe title="YouTube video player" width="640" height="410"
 src="http://www.youtube.com/embed/DQ3ZCWFVx-4" frameborder="0"
-allowfullscreen></iframe>
+allowfullscreen>
+</iframe>
 
 !SLIDE full-page work
 
