@@ -55,6 +55,11 @@ body {
     left: 0;
 }
 
+#preso .popdevelop h1 {
+    top: 2em;
+    left: 50%;
+}
+
 /* Code font*/
 #preso code,
 #preso pre {
