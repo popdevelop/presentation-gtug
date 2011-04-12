@@ -80,30 +80,68 @@
 <div class="slide" data-transition="none"><div class="content full-page" ref="popdevelop/01_popdevelop/1">
 <h1>Google Maps on the web</h1>
 
-<h2>by Popdevelop 13/4 - 2011</h2></div>
+<h3>by Popdevelop 13/4 - 2011</h3></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="popdevelop/01_popdevelop/2">
-<h1>Om popdevelop</h1>
-
-<h1>Om oss tv&#xE5;, roliga bilder</h1>
-
-<h1>Kanske filmen</h1></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="popdevelop/01_popdevelop/3">
-<h1>vad har vi gjort</h1></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/1">
-<h1>The google maps family</h1>
+<h1>About Popdevelop</h1>
 
 <ul>
-<li>google maps</li>
-<li>google earth</li>
-<li>layers (kml, fusion, trafic, bicycle)</li>
-<li>panoramio</li>
-<li>elecvation</li>
-<li>geocoding</li>
-<li>streetview</li>
-<li>directions</li>
-<li>ad sense maps</li>
-<li>transit</li>
+<li>Started in January 2011</li>
+<li>Four nerds</li>
+<li>Background from embedded</li>
+<li>Now into web</li>
 </ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page work" ref="popdevelop/01_popdevelop/3">
+<h1>Some of our work</h1>
+
+<ul>
+<li><a href="http://kollektivt.se">kollektivt.se</a> - Bus visualisation</li>
+<li><a href="http://taglaget.nu">taglaget.nu</a> - Train visualisation</li>
+</ul>
+
+
+<!-- Mer?
+Dogvibes, Consulting embedded, Consulting web, Iphone utveckling, Arduino
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page family" ref="intro/01_slide/1">
+<h1>The google maps family</h1>
+
+<h2>APIs</h2>
+
+<ul>
+<li><span id="jsapi">Maps Javascript</span></li>
+<li>Maps Flash</li>
+<li>Static Maps</li>
+<li>Google Earth</li>
+</ul>
+
+
+<h2>Web services</h2>
+
+<ul>
+<li>Geocoding</li>
+<li>Directions</li>
+<li>Elevation</li>
+<li>Places</li>
+<li>Ad sense maps</li>
+<li>Transit</li>
+</ul>
+
+
+<script>
+(function() {
+var next = false;
+$('.family').bind('showoff:next', function(e) {
+  if(next) return true;
+  $('#jsapi').addClass('highlight');
+  Cufon.refresh();
+  e.preventDefault();
+  next = true;
+  return false;
+});
+}());
+</script>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/2">
 <h1>Introduction, Google Maps V3</h1>
@@ -111,15 +149,37 @@
 <ul>
 <li>Released May 2009</li>
 <li>Completely re-written from V2</li>
+<li>No API-key needed</li>
+<li>Designed with mobile devices in mind</li>
+</ul>
+
+
+<p>(demo in iOS simulator)</p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/3">
+<h1>Optimizations from V2</h1>
+
+<h2>Problems</h2>
+
+<ul>
+<li>Alot of resources to load</li>
+<li>V2 code is 220KB</li>
+<li>iOS3 took 4.4sec just to parse</li>
+<li>UI blocks</li>
+</ul>
+
+
+<h2>Enhancements</h2>
+
+<ul>
 <li>Optimized "bootstrap" process</li>
-<li>Works well in mobile devices (webkit)</li>
-<li>License?</li>
+<li>More modular design</li>
+<li>Lower latency</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page incremental" ref="intro/01_slide/3">
-<h1>GIS Basics</h1>
+</div><div class="slide" data-transition="none"><div class="content full-page incremental" ref="intro/01_slide/4">
+<h1>GIS Basics gis</h1>
 
-<h2>Tiles</h2>
+<h2>Image tiles</h2>
 
 <ul>
 <li>Bitmap images</li>
@@ -128,7 +188,7 @@
 </ul>
 
 
-<h2>Feature primitives</h2>
+<h2>Primitives</h2>
 
 <ul>
 <li>Points</li>
@@ -136,7 +196,7 @@
 <li>PolyLine</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/4">
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/5">
 <h1>Google Maps basics</h1>
 
 <ul>
@@ -158,7 +218,7 @@
 <li>Control width/height with CSS</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page googlemap" ref="intro/01_slide/5">
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap" ref="intro/01_slide/6">
 <h1>Standard Google map</h1>
 
 <p>This is what you get!</p>
@@ -167,55 +227,63 @@
 
 
 <script>
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
-  var myOptions = {
-    zoom: 8,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("canvas"), myOptions);
+(function() {
+  var map = new google.maps.Map(document.getElementById("canvas"), Gmap.Options());
   $('.googlemap').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
-    map.setCenter(latlng);
+    map.setCenter(Gmap.LatLng());
   });
+}());
 </script>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/6">
+</div><div class="slide" data-transition="none"><div class="content full-page features" ref="intro/01_slide/7">
 <h1>Some Google maps features</h1>
 
 <p>Google maps has quite alot of built in features ready to be used. Here are a few:</p>
 
-<h2>Marker</h2>
+<br>
+
+
+<p><img src="file:///Users/sebastianwallin/dev/showoff/gtug/intro/../img/google-marker.jpeg" width="70" height="61" alt="Marker"/>
+<img src="file:///Users/sebastianwallin/dev/showoff/gtug/intro/../img/infowindow.png" width="100" height="70" alt="Infowindow"/>
+<img src="file:///Users/sebastianwallin/dev/showoff/gtug/intro/../img/polygon.png" width="100" height="66" alt="Polygons"/></p>
+
+<h3>Marker</h3>
 
 <p><code>var marker = new google.maps.Marker({...});</code></p>
 
-<h2>Info Window</h2>
+<h3>Info Window</h3>
 
-<p><code>var infowindow = new google.maps.InfoWindow({});</code></p>
+<p><code>var info = new google.maps.InfoWindow({...});</code></p>
 
-<h2>Circles/Rectangles</h2>
+<h3>Circles/Rectangles/Polygons</h3>
 
 <p><code>var cicle = new google.maps.Circle({...});</code></p>
 
-<h3>See them all at <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3></div>
+<h3>See them all at <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3></br>
+</div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/1">
 <h1>Styling Google maps</h1>
 
-<p>Unstyled is pretty boring...</p></div>
+<h3>Unstyled is pretty boring...</h3></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/2">
 <h1>Custom marker</h1>
 
 <p>By using Googles <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing">Custom Overlay Class</a>
 we can create our own marker using any HTML/CSS we want</p>
 
-<p><img src="file:///Users/sebastianwallin/dev/showoff/presentation-gtug/style/../img/custom_marker.png" width="426" height="311" alt="Custom marker"/></p></div>
+<p><img src="file:///Users/sebastianwallin/dev/showoff/gtug/style/../img/custom_marker.png" width="426" height="311" alt="Custom marker"/></p>
+
+<h3>Example from <a href="http://taglaget.nu">taglaget.nu</a></h3></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/3">
 <h1>Custom tiles</h1>
 
+<h3>From <a href="http://googlegeodevelopers.blogspot.com/2010/05/add-touch-of-style-to-your-maps.html">may 2010</a> Google allows styling of their tiles:</h3>
+
 <ul>
-<li>Allows control of map features</li>
-<li>Allows simplification of features</li>
-<li>Allows control of map colors</li>
+<li>Control of map features</li>
+<li>Simplification of features</li>
+<li>Control of map colors</li>
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page googlemap2" ref="style/01_style/4">
@@ -228,13 +296,6 @@ we can create our own marker using any HTML/CSS we want</p>
 
 <script>
 (function() {
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
-  var myOptions = {
-      zoom: 8,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
   var theme = [
     {
       featureType: "water",
@@ -274,12 +335,12 @@ we can create our own marker using any HTML/CSS we want</p>
   ]
   var style = new google.maps.StyledMapType(theme, { name: "hellokitty"});
 
-  var map = new google.maps.Map(document.getElementById("canvas2"), myOptions);
+  var map = new google.maps.Map(document.getElementById("canvas2"), Gmap.OptionsUI());
   map.mapTypes.set('hellokitty', style);
   map.setMapTypeId('hellokitty');
   $('.googlemap2').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
-    map.setCenter(latlng);
+    map.setCenter(Gmap.LatLng());
   });
 }());
 </script>
@@ -308,212 +369,501 @@ we can create our own marker using any HTML/CSS we want</p>
 
 <p>Try it at <a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html" title="Wizard">Google custom style wizard</a></p></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/6">
-<h1>Styling controls</h1>
+<h1>Custom controls</h1>
 
 <ul>
-<li>Map controls can be customized</li>
+<li>Default controls can be turned off</li>
 </ul>
+
+
+<p><code>disableDefaultUI: true /* in init-options */</code></p>
+
+<ul>
+<li>Map can be controlled programatically</li>
+</ul>
+
+
+<p><code>map.setCenter(&lt;LatLng&gt;);</code>
+<code>map.setZoom(&lt;integer&gt;);</code></p>
+
+<ul>
+<li>Make your own controls with HTML/JS</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap3" ref="style/01_style/7">
+<h1>Example: own zoom buttons</h1>
+
+<p><button id="zoomin">Zoom in</button>
+<button id="zoomout">Zoom out</button>
+<button id="gowest">Go west!</button></p>
+
+<div class="gmaps"><div id="canvas3"/></div>
+
+
+<script>
+(function() {
+  var map = new google.maps.Map(document.getElementById("canvas3"), Gmap.OptionsUI());
+  var zoom = map.getZoom();
+  $('.googlemap3').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+  $('#zoomin').click(function() { map.setZoom(++zoom); })
+  $('#zoomout').click(function() { map.setZoom(--zoom); })
+  $('#gowest').click(function() {
+    var p = map.getCenter();
+    var c = new google.maps.LatLng(p.lat(), p.lng() - 0.1);
+    map.setCenter(c);
+  });
+}());
+</script>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/1">
-<h1>Performance</h1>
-
-<p>Handling a lot of data (or "getting hardcore")</p>
+<h1>3. Performance</h1>
 
 <ul>
-<li>user perceived latency &#x2013; how long it takes for the page to appear usable, in
-this case for the map to be rendered</li>
-<li>page ready time - how long it takes for the page to become usable, e.g. for
-the map to be draggable</li>
-<li>page load time - how long it takes for all the elements to be present, in the
-case of maps this includes all of the map controls to be loaded and working</li>
+<li>Handling a lot of data!</li>
 </ul>
+
+
+<!--
+How do you handle 30 000 markers on a maps?
+How do you handle highres lines or data heavy applications?
+
+* user perceived latency – how long it takes for the page to appear usable, in
+this case for the map to be rendered
+* page ready time - how long it takes for the page to become usable, e.g. for
+the map to be draggable
+-->
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/2">
-<h2>to many markers on map</h2>
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap_perf1" ref="performance/01_performance/2">
+<h1>Why?</h1>
 
-<h2>marker rendering speed</h2>
+<p><button id="addmarkers">Add 100 Markers</button>
+<button id="clearmarkers">Clear Markers</button></p>
 
-<h2>to much data, load time</h2>
+<div class="gmaps"><div id="perf1_canvas"/></div>
 
-<h2>to many javascript objects or dom elements</h2>
 
-<h2>usability problem</h2></div>
+
+
+<script>
+(function() {
+
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf1_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var markers = [];
+  google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+       $('#addmarkers').click(function() {
+         var bounds = map.getBounds();
+         var southWest = bounds.getSouthWest();
+         var northEast = bounds.getNorthEast();
+         var lngSpan = northEast.lng() - southWest.lng();
+         var latSpan = northEast.lat() - southWest.lat();
+         var j = 100;
+         while(j--){
+           var point = new google.maps.LatLng(southWest.lat() + latSpan * Math.random(), southWest.lng() + lngSpan * Math.random());
+           var marker = new google.maps.Marker({position:point, map:map});
+           markers.push(marker);
+         }
+       });
+   });
+   $('#clearmarkers').click(function() {
+     var i = markers.length;
+     while(i--){
+      markers[i].setMap(null);
+     }
+     markers = [];
+   });
+  $('.googlemap_perf1').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+}());
+</script>
+
+
+<p>(livedemo, markers)</p>
+
+<!--
+* Too many markers on the map
+* Marker rendering is slow
+* To much data, load time
+* Many js-objects or DOM elements
+* Usability problem
+-->
+
+
+
+
+<!--
+# Solution? Depends on reqs?
+* map interaction
+* information detail on different levels
+* target platform, ipad or chrome
+* data structure, volatile, size, update frequency
+-->
+</div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/3">
-<h1>Solution? Depends on reqs?</h1>
+<h1>Knuth?</h1>
 
-<ul>
-<li>map interaction</li>
-<li>information detail on different levels</li>
-<li>target platform, ipad or chrome</li>
-<li>data structure, volatile, size, update frequency</li>
-</ul>
+<p><img src="file:///Users/sebastianwallin/dev/showoff/gtug/performance/rootevil.jpg" width="564" height="417" alt="Root of all evil"/></p>
+
+<!--
+how do you measure it, find problems
+-->
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/4">
 <h1>Measure it</h1>
 
 <ul>
-<li>how do you measure it, find problems</li>
-<li>firebug/chrome developer tools</li>
-<li>data loading time</li>
-<li>profiling, function calls</li>
-<li>console.log, events when overlay added, map events</li>
+<li>Chrome developer tools or Firebug
+
+<ul>
+<li>Network time for request</li>
+<li>Profiling, function calls</li>
+</ul>
+</li>
 <li>http://jsperf.com/browse</li>
 <li>Online Marker tests</li>
-<li>Test with different browsers on a slow computer?</li>
+<li>Try different browsers</li>
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/5">
-<h1>Methods of improvement</h1>
+<h1>Methods of improvement</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/6">
+<h1>Clustering</h1>
+
+<p><img src="file:///Users/sebastianwallin/dev/showoff/gtug/performance/uncluster.jpg" width="320" height="240" alt="Before Cluster"/>
+<img src="file:///Users/sebastianwallin/dev/showoff/gtug/performance/cluster2.jpg" width="320" height="240" alt="After Cluster"/></p>
+
+<!--
+Images by Martin Pearman, http://googlemapsapi.martinpearman.co.uk/
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/7">
+<h1>Clustering</h1>
 
 <ul>
-<li>clustering
+<li>Grid-based Clustering</li>
+<li>Area Clustering</li>
+<li>Distance based clustering</li>
+<li><a href="http://en.wikipedia.org/wiki/K-means_clustering">K-means clustering</a></li>
+<li><a href="http://home.dei.polimi.it/matteucc/Clustering/tutorial_html/">Article: Clustering basics</a></li>
+</ul>
+
+
+<!--
+# Clustering
+  * Client side clustering
+  * Server side clustering
+
+- Beratta att det finns lite olika tekniker, visa bilder lite snabbt
+Often distance-based Clusteringm but attributes works good also
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/8">
+<h1>MarkerClusterer</h1>
+
+<p><img src="file:///Users/sebastianwallin/dev/showoff/gtug/performance/markerclusterer.jpg" width="578" height="215" alt="MarkerClusterer"/></p>
+
+<p><a href="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html">MarkerClusterer by google</a></p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap_perf2" ref="performance/01_performance/9">
+<h1>MarkerCluster</h1>
+
+<p><button id="addmarkerscluster">Add 100 Markers with MarkerClusterer</button>
+<button id="clearmarkerscluster">Clear Markers</button></p>
+
+<div class="gmaps"><div id="perf2_canvas"/></div>
+
+
+
+
+<script>
+(function() {
+
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf2_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+
+  var markerCluster = new MarkerClusterer(map);
+  google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+       $('#addmarkerscluster').click(function() {
+         var markers = [];
+         var bounds = map.getBounds();
+         var southWest = bounds.getSouthWest();
+         var northEast = bounds.getNorthEast();
+         var lngSpan = northEast.lng() - southWest.lng();
+         var latSpan = northEast.lat() - southWest.lat();
+         var j = 100;
+         while(j--){
+           var point = new google.maps.LatLng(southWest.lat() + latSpan * Math.random(), southWest.lng() + lngSpan * Math.random());
+           var marker = new google.maps.Marker({'position': point});
+           markers.push(marker);
+         }
+         markerCluster.addMarkers(markers);
+         markers = [];
+       });
+   });
+   $('#clearmarkerscluster').click(function() {
+     markerCluster.clearMarkers();
+   });
+
+  $('.googlemap_perf2').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+
+}());
+</script>
+
+
+
+
+<!--
+all of you have probably seen this
+what is it
+settings
+gridbased!
+clientside
+demo
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/10">
+<h1>MarkerManager</h1>
+
+<p><a href="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markermanager/1.0/docs/reference.html">MarkerManger by google</a></p>
+
+<!--
+MarkerManager
+what is it
+settings
+demo
+clientside
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/11">
+<h1>Server Side Clustering</h1>
+
+<!--
+what is it
+why and when?
+demo
+hitta bra exempel!
+http://www.usda.gov/recovery/map/
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/12">
+<h1>Add Layers</h1>
 
 <ul>
-<li>client side clustering</li>
-<li>server side clustering</li>
+<li>Generated tiles</li>
+<li>Heatmaps</li>
+<li>FusionTable</li>
+<li>KML</li>
+</ul>
+
+
+<!--
+FIXME: read heatmap api exmaple, visa
+Generated tiles, how? tile server?
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/13">
+<h1>Custom Tiles</h1>
+
+<p><img src="file:///Users/sebastianwallin/dev/showoff/gtug/performance/customtiles.png" width="748" height="448" alt="Custom Tiles"/></p>
+
+<p><a href="http://demo.mapbox.com/dc-nightvision.html">Custom tiles with Mapbox</a></p></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/14">
+<h1><a href="http://maps.google.com/help/maps/elections/index.html#fundrace">Custom Tiles</a></h1>
+
+<iframe title="Mapnificent Trip Planing" width="640" height="410" src="http://maps.google.com/help/maps/elections/index.html#fundrace" framborder="0"/>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap_perf3" ref="performance/01_performance/15">
+<h1>KML</h1>
+
+<div class="gmaps"><div id="perf3_canvas"/></div>
+
+
+<script>
+(function() {
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf3_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var layer = new google.maps.KmlLayer(
+      'http://myxa.popdevelop.net/homes.kmz?token=90', {
+      preserveViewport: true, suppressInfoWindows:
+      true });
+  layer.setMap(map);
+
+  $('.googlemap_perf3').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+
+}());
+</script>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page googlemap_perf4" ref="performance/01_performance/16">
+<h1>Google Fusion Table (Beta!)</h1>
+
+<div class="gmaps"><div id="perf4_canvas"/></div>
+
+
+<script>
+(function() {
+  var tableid_1 = 628739;
+  var tableid_2 = 685404;
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf4_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var layer_1 = new google.maps.FusionTablesLayer(tableid_1);
+  layer_1.setQuery("SELECT * FROM " + tableid_1);
+  layer_1.setMap(map);
+
+  var layer_2 = new google.maps.FusionTablesLayer(tableid_2);
+  layer_2.setMap(map);
+  $('.googlemap_perf4').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+}());
+</script>
+
+
+
+
+<!--
+google fusion table example
+Vad erbjuder fusion table for maps
+intensity map
+markers with interaction, custom marker and overlay
+sql-like api from your javascript!
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/17">
+<h1>Performance Tips</h1>
+
+<ul>
+<li>Supermarker</li>
+<li>Markerlight</li>
+<li><a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html">Marker Test 1</a></li>
+<li><a href="http://www.svennerberg.com/examples/markers/markerPerformance.html">Marker Test 2</a></li>
+<li><a href="http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers">SuperMarker style</a></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/18">
+<h1>Data simplification</h1>
+
+<ul>
+<li>Simplify polylines</li>
+<li>Fetch data more efficient
+
+<ul>
+<li>Slim down your protocol</li>
+<li>Fetch using boundingbox</li>
+<li>Divide data, overlayinfo, markerinfo</li>
 </ul>
 </li>
 </ul>
 
 
-<p>Clustering techniques
-- Beratta att det finns lite olika tekniker, visa bilder lite snabbt
-Grid-based Clustering
-Regional clusrering
-Distance-based Clustering
-K-means clustering
-http://en.wikipedia.org/wiki/K-means_clustering
-http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/</p>
+<!--
 
-<p>MarkerClusterer
--what is it
-gridbased!
--demo
--http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html
-speed test clustering
-http://www.svennerberg.com/examples/markers/markerPerformance.html</p>
+http://code.google.com/intl/sv-SE/apis/maps/documentation/utilities/polylinealgorithm.html
+how to code polylines smart, raksträckor tex brezenhams?
 
-<p>MarkerManager
--what is it
--demo
-- http://google-maps-utility-library-v3.googlecode.com/svn/tags/markermanager/1.0/docs/reference.html</p>
-
-<p>Marker Manager</p>
-
-<p>Serverside clustering
--what is it
--demo
-http://www.usda.gov/recovery/map/
-http://www.geograph.org.uk/mapper/clusters.php#ll=54.55,-3.88&amp;z=6&amp;t=p&amp;r=c
-Try ZeeMaps (http://www.zeemaps.com). We apply several heuristics to improve
-the loading time when you have large number of markers. For less than 5,000
-markers we use a fast clustering algorithm, and only display visible markers.
-For more than 5,000 markers we use server-side tiling.</p>
-
-<p>Marker light</p>
-
-<p>SuperMarker</p></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/6">
-<p>Static view (with interaction)
-KML
-Heatmaps (gheatmap, api etc)
-Generated tiles
-FusionTable</p></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/7">
-<ul>
-<li>google fusion table example
-Vad erbjuder fusion table for maps, areamap, heartmap, custom border</li>
-</ul>
-</div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/8">
-<ul>
-<li>data simplification</li>
-<li>simplify polylines</li>
-<li>fetch data more efficient</li>
-<li>slim down your protocol</li>
-<li>fetch using boundingbox</li>
-<li>divide data, overlayinfo, markerinfo</li>
-</ul>
-
-
-<p>http://code.google.com/intl/sv-SE/apis/maps/documentation/utilities/polylinealgorithm.html
-how to code polylines smart, rakstr&#xE4;ckor tex brezenhams?</p>
-
-<p>DOM elements, listeners js objects
+DOM elements, listeners js objects
 The latter pattern is more efficient, with 1 modification.  Rather than
 creating a listener function in each call to .addListener(), create your
 listener function once and add that same listener to all markers.  Reducing
 the number of Objects like this helps older browsers especially.
 Render GIFs for IE, instead of alpha PNGs
-GMarker ger 5 DOM nodes, egen div ger div med img ger 2.</p></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/9">
-<h1>RANDOM STUFF?</h1>
+GMarker ger 5 DOM nodes, egen div ger div med img ger 2.
 
-<p>http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers</p>
-
-<p>Render GIFs for IE, instead of alpha PNGs
-http://www.svennerberg.com/2009/01/handling-large-amounts-of-markers-in-google-maps/</p>
-
-<p>http://code.google.com/intl/sv-SE/apis/maps/articles/toomanymarkers.html</p>
-
-<p>http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html</p>
-
-<p>http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/v2/mediagallery.html</p>
-
-<p>Andra delar
- - google streetview
- - google earth
- - google direction</p>
+Render GIFs for IE, instead of alpha PNGs
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/19">
+<h1>bra exempel, flytta var?</h1>
 
 <ul>
-<li>om popdevelop</li>
-<li>om mig/seb</li>
+<li><a href="https:////maptd.com/map/earthquake_activity_vs_nuclear_power_plants/">Custom tiles?</a></li>
+<li><a href="http://googlemapsmania.blogspot.com/">Google Maps Mania</a></li>
+<li><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/v2/mediagallery.html">Goole Maps Media gallery</a></li>
+<li><a href="http://move.rmi.org/features/oilmap.html">1</a></li>
+<li><a href="http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/">2</a></li>
+<li><a href="http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&amp;long=-122.44922089716879&amp;market=sanfrancisco&amp;region_id=17151&amp;region_type=6&amp;sf=1,2&amp;v=6&amp;zoomLevel=12">3</a></li>
+<li><a href="http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp">4</a></li>
 </ul>
 
 
-<p>Visa vad man kan g&#xF6;ra, ingen teknik?</p>
-
-<h1>bra exempel</h1>
-
-<h1>slutet</h1>
-
-<p>http://map.baidu.com/
-the wilderness downtown
-svenska varianten, malmo
- android 3d maps
-http:// - mapnificient.com?
-http://www.youtube.com/watch?v=XNsrj5bE2qI
-http://www.youtube.com/watch?v=w44cdIOor7E</p>
-
-<p>http://googlemapsmania.blogspot.com/
-http://move.rmi.org/features/oilmap.html
-http://fundrace.huffingtonpost.com/
-http://maptd.com/map/earthquake<em>activity</em>vs<em>nuclear</em>power<em>plants/
-http://www.redfin.com/homes-for-sale#!lat=37.78681721535732&amp;long=-122.44922089716879&amp;market=sanfrancisco&amp;region</em>id=17151&amp;region<em>type=6&amp;sf=1,2&amp;v=6&amp;zoomLevel=12
-http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html?src=tp
-http://projects.nytimes.com/crime/homicides/map
-http://maptd.com/map/earthquake</em>activity<em>vs</em>nuclear<em>power</em>plants/
-geocoding av tweets location to state
-2210 mashups online
-http://www.programmableweb.com/api/google-maps/mashups
-heatmap
-http://boston.povo.com/Boston?heatmap&amp;query=pizza&amp;tags=pizza%2csandwiches,pasta&amp;center=42.30879983710441,-71.0595703125&amp;zoom=11</p></div>
+<!--
+* http://projects.nytimes.com/crime/homicides/map
+* http://maptd.com/map/earthquake_activity_vs_nuclear_power_plants/
+* http://boston.povo.com/Boston?heatmap&query=pizza&tags=pizza%2csandwiches,pasta&center=42.30879983710441,-71.0595703125&zoom=11
+-->
+</div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/1">
-<h1>Demos...</h1></div>
+<h1>4. Demos...</h1></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/2">
-<h1>1</h1></div>
+<h1><a href="http://bit.ly/fxBpw0">3D-maps, sweded?</a></h1></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/3">
-<h1>2</h1></div>
+<h1>3D-maps for Android?</h1>
+
+<iframe title="YouTube video player" width="640" height="410" src="http://www.youtube.com/embed/TAh4yiCzgKw" frameborder="0"/>
+
+
+<h3><a href="http://www.google.com/mobile/maps/3d/">Google Maps 5.0 for Android</a></h3></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/4">
-<h1>3</h1></div>
+<h1><a href="http://www.mapnificent.net/torino/#/?lat0=45.061105116935906&amp;lng0=7.713054452050756&amp;t0=15">Mapnificent Trip Planing</a></h1>
+
+<iframe title="Mapnificent Trip Planing" width="640" height="410" src="http://www.mapnificent.net/torino/#/?lat0=45.061105116935906=7.713054452050756=15" framborder="0"/>
+</div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/5">
+<h1>Isometric Maps?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/6">
+<h1><a href="http://sewa.se/isometric/">Isometric Popdevelop Style</a></h1>
+
+<iframe title="Mapnificent Trip Planing" width="640" height="410" src="http://sewa.se/isometric" framborder="0"/>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/7">
+<h1><a href="http://bit.ly/fpzq1Q">Isometric China Style</a></h1></div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/8">
+<h1><a href="http://www.thewildernessdowntown.com/">Google Maps Music Video?</a></h1>
+
+<iframe title="YouTube video player" width="640" height="410" src="http://www.youtube.com/embed/w44cdIOor7E#t=1m5s" frameborder="0"/>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/9">
 <h1>References, l&#xE4;nkar</h1>
 
-<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
-
-<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
-
-<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Add all links here</a></h3>
 
 <h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
 
@@ -528,10 +878,20 @@ http://boston.povo.com/Boston?heatmap&amp;query=pizza&amp;tags=pizza%2csandwiche
 <h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
 
 <h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/6">
-<h1>Avslut, sjuk bild</h1>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="wrapup/01_wrapup/10">
+<ul>
+<li><a href="http://popdevelop.com">http://popdevelop.com</a></li>
+<li><a href="http://twitter.com/popdevelop">http://twitter.com/popdevelop</a></li>
+<li><a href="http://www.youtube.com/popdevelop">http://www.youtube.com/popdevelop</a></li>
+<li><a href="http://flickr.com/popdevelop">http://flickr.com/popdevelop</a></li>
+<li><a href="http://popdevelop.github.com/FIXME">http://github.com/popdevelop</a></li>
+</ul>
 
-<h1>Visa hemma hos popdevelop?</h1></div>
+
+<h1>Visa hemma hos popdevelop?</h1>
+
+<!-- FIXME LINKS -->
+</div>
 </div>
 </div>
 

@@ -16,6 +16,28 @@ body {
     border-bottom: 2px solid #6D4927;
 }
 
+#preso .highlight {
+    color: #8b0000;
+}
+
+/* Style for individual slides */
+#preso .features img {
+    display: inline-block;
+    padding: 0.1em;
+    margin: 0;
+}
+
+#preso .family ul li{
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+#preso .googlemap3 button {
+    margin: 0;
+}
+
+
 
 /* Code font*/
 #preso code,
@@ -38,7 +60,9 @@ body {
     background-color: transparent;
 }
 #preso code {
-    border: 3px dashed #98CBD6;
+    display: block;
+    border: 1px dashed #65aaba;
+    background-color: #eee;
 }
 
 
@@ -54,6 +78,12 @@ h3 { font-size: 24px; }
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     height: 768px;
+}
+
+#preso, .slide {
+  background-color: transparent !important;
+  border: none !important;
+  margin-top: -30px;
 }
 
 
@@ -72,16 +102,14 @@ h3 { font-size: 24px; }
 }
 .gmaps {
     width: 640px;
-    height: 480px;
+    height: 410px;
 }
-.gmaps #canvas,
-.gmaps #canvas2 {
-    height: 480px;
+#preso .gmaps > div {
+    height: 410px;
     box-shadow: none;
 }
 
-.gmaps #canvas img,
-.gmaps #canvas2 img {
+#preso .gmaps > div img {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
