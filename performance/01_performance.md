@@ -248,7 +248,7 @@ http://www.usda.gov/recovery/map/
 # Add Layers
 * Generated tiles
 * Heatmaps
-* FusionTable
+* FusionTables
 * KML
 
 <!--
@@ -298,7 +298,7 @@ framborder="0"></iframe>
 
 !SLIDE full-page googlemap_perf4
 
-# Google Fusion Table (Beta!)
+# Google Fusion Tables (Beta!)FIXA LINK
 <div class="gmaps">
   <div id="perf4_canvas">
   </div>
@@ -337,16 +337,24 @@ markers with interaction, custom marker and overlay
 sql-like api from your javascript!
 -->
 
+
 !SLIDE full-page
 
-# Data simplification
-* Simplify polylines
-* Fetch data more efficient
-  * Slim down your protocol
-  * Fetch using boundingbox
-  * Divide data, overlayinfo, markerinfo
+# Fetch data more efficient
+* Slim down your protocol
+* Fetch using boundingbox
+
+<!-- ge ett exempel -->
+
+!SLIDE full-page
+
+# Data simplification - FIXA BILD
+* Encoded polylines
 
 <!--
+
+http://code.google.com/intl/sv/apis/maps/documentation/javascript/geometry.html
+
 # Performance Tips
 
 * Supermarker

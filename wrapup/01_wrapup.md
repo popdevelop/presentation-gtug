@@ -62,7 +62,7 @@ allowfullscreen>
 * [popdevelop.github.com/presentation-gtug/](http://popdevelop.github.com/presentation-gtug/)
 * [popdevelop.com](http://popdevelop.com)
 * [twitter.com/popdevelop](http://twitter.com/popdevelop)
-* [www.youtube.com/popdevelop](http://www.youtube.com/popdevelop)
+* [youtube.com/popdevelop](http://www.youtube.com/popdevelop)
 * [flickr.com/popdevelop](http://www.flickr.com/photos/56096350@N02)
 * [github.com/popdevelop](http://www.github.com/popdevelop)
 
