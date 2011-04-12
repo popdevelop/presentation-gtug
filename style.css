@@ -37,7 +37,14 @@ body {
     margin: 0;
 }
 
-
+#preso .light-on-dark h1 {
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    opacity: 0.7;
+}
 
 /* Code font*/
 #preso code,
@@ -81,7 +88,6 @@ h3 { font-size: 24px; }
 }
 
 #preso, .slide {
-  background-color: transparent !important;
   border: none !important;
   margin-top: -30px;
 }

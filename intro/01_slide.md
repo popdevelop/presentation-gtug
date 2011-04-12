@@ -1,3 +1,7 @@
+!SLIDE center light-on-dark
+![background](../img/google-maps-intro.jpg)
+# Google maps #
+
 !SLIDE full-page family
 
 # The google maps family

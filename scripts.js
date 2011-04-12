@@ -19,7 +19,10 @@ $(function() {
       
       // Set new background on body
       $('body')
-        .css('background', 'url(' + src + ') no-repeat center center fixed')
+        .css('background-image', 'url(' + src + ')')
+        .css('background-repeat', 'no-repeat')
+        .css('background-position', 'center center')
+        .css('background-attachment', 'fixed')
         .css('-webkit-background-size', 'cover')
         .css('-moz-background-size', 'cover')
         .css('-o-background-size', 'cover')
