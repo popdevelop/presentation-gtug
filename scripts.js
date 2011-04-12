@@ -10,8 +10,6 @@ $(document).ready(function() {
   }, 400);
 });
 
-<<<<<<< HEAD
-
 $(function() {
   $('div.content').live('showoff:show', function(evt) {
     var bg_img = $('img[alt=background]', evt.target);

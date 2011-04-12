@@ -56,7 +56,7 @@ $('.family').bind('showoff:next', function(e) {
 * Optimized "bootstrap" process
 * Lower latency
 
-!SLIDE center incremental
+!SLIDE full-page incremental
 # GIS Basics
 ## Image tiles ##
   - Bitmap images
