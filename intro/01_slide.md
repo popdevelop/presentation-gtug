@@ -33,10 +33,23 @@ $('.family').bind('showoff:next', function(e) {
 # Introduction, Google Maps V3#
 * Released May 2009
 * Completely re-written from V2
-* Optimized "bootstrap" process
-* Works well in mobile devices (webkit)
+* No API-key needed
+* Designed with mobile devices in mind
 
 (demo in iOS simulator)
+
+!SLIDE full-page
+# Optimizations from V2 #
+## Problems ##
+* Alot of resources to load
+* V2 code is 220KB
+* iOS3 took 4.4sec just to parse
+* UI blocks
+
+## Enhancements ##
+* Optimized "bootstrap" process
+* More modular design
+* Lower latency
 
 !SLIDE full-page incremental
 # GIS Basics gis
