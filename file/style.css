@@ -37,13 +37,31 @@ body {
     margin: 0;
 }
 
-#preso .light-on-dark h1 {
+#preso .light-on-dark h1,
+#preso .light-on-dark h3 {
+    position: absolute;
     color: #fff;
     background-color: #000;
     border-radius: 5px;
     display: inline-block;
     padding: 0.1em 0.5em;
     opacity: 0.7;
+    left: 2em;
+}
+#preso .light-on-dark h3 {
+    position: relative;
+    clear: both;
+    top: 5em;
+    left: 0;
+}
+
+#preso .popdevelop h1 {
+    top: 2em;
+    left: 50%;
+}
+
+#preso .thanks li {
+    font-size:22px;
 }
 
 /* Code font*/
