@@ -1,5 +1,6 @@
-!SLIDE full-page
-# Styling Google maps #
+!SLIDE center light-on-dark
+![background](styling.jpg)
+# 3. Styling Google maps #
 ### Unstyled is pretty boring... ###
 
 
@@ -22,7 +23,7 @@ we can create our own marker using any HTML/CSS we want
     /* Implement "virtual" functions */
     MyMarker.prototype.onAdd = function() { ... };
     MyMarker.prototype.draw = function() { ... };
-    
+
 ### [Full example](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing) ###
 
 !SLIDE full-page

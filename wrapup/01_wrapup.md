@@ -1,7 +1,7 @@
 !SLIDE center light-on-dark
 ![background](cool.jpg)
 
-# 4. Cool Examples #
+# 5. Cool Examples #
 
 !SLIDE full-page
 
