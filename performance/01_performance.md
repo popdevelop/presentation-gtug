@@ -1,6 +1,11 @@
-!SLIDE full-page
+!SLIDE center light-on-dark
+![background](performance.jpg)
 # 3. Performance #
-- Handling a lot of data!
+
+<!--
+Image cred to:
+http://thefixedgear.wordpress.com/
+-->
 
 <!--
 How do you handle 30 000 markers on a maps?

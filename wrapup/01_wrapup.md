@@ -1,6 +1,7 @@
-!SLIDE full-page
+!SLIDE center light-on-dark
+![background](cool.jpg)
 
-# 4. Demos...(FIXA BILD)
+# 4. Cool Examples #
 
 !SLIDE full-page
 
