@@ -160,7 +160,7 @@ $('.family').bind('showoff:next', function(e) {
 
 <ul>
 <li>Released May 2009</li>
-<li>Completely re-written from V2</li>
+<li>Completely re-written from V2 (2006)</li>
 <li>No API-key needed</li>
 <li>With mobile devices in mind</li>
 </ul>
@@ -189,13 +189,13 @@ $('.family').bind('showoff:next', function(e) {
 <li>Lower latency</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content full-page incremental" ref="intro/01_slide/5">
+</div><div class="slide" data-transition="none"><div class="content full-page incremental gis" ref="intro/01_slide/5">
 <h1>GIS Basics</h1>
 
 <h2>Image tiles</h2>
 
 <ul>
-<li>Bitmap images</li>
+<li>Bitmap images <img src="./file/intro/tiles.png" width="200" height="200" alt="Tiles"/></li>
 <li>For all zoom levels</li>
 <li>Non-interactive</li>
 </ul>
@@ -294,7 +294,9 @@ function MyMarker(...) { ... };
 MyMarker.prototype = new google.maps.OverlayView()
 /* Implement "virtual" functions */
 MyMarker.prototype.onAdd = function() { ... };
-MyMarker.prototype.draw = function() { ... };</code></pre></div>
+MyMarker.prototype.draw = function() { ... };</code></pre>
+
+<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing">Full example</a></h3></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/4">
 <h1>Custom tiles</h1>
 

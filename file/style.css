@@ -64,6 +64,10 @@ body {
     font-size:22px;
 }
 
+#preso .gis img {
+    float: right;
+}
+
 /* Code font*/
 #preso code,
 #preso pre {
