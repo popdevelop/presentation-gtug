@@ -151,13 +151,51 @@ http://www.usda.gov/recovery/map/
 FIXME: read heatmap api exmaple, visa
 Generated tiles, how? tile server?
 -->
+!SLIDE full-page
+
+# Custom Tiles
+![Custom Tiles](customtiles.png)
+
+[Custom tiles with Mapbox](http://demo.mapbox.com/dc-nightvision.html)
+
+!SLIDE full-page
+
+#[Custom Tiles](http://maps.google.com/help/maps/elections/index.html#fundrace)
+
+<iframe title="Mapnificent Trip Planing" width="640" height="410"
+src="http://maps.google.com/help/maps/elections/index.html#fundrace"
+framborder="0"></iframe>
+
+!SLIDE full-page
+
+# KML
+
+<div class="gmaps"><div id="perf3_canvas"></div></div>
+<script>
+(function() {
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf3_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var layer = new google.maps.KmlLayer(
+      'http://myxa.popdevelop.net/homes.kmz?token=90', {
+      preserveViewport: true, suppressInfoWindows:
+      true });
+  layer.setMap(this.map);
+}());
+</script>
 
 !SLIDE full-page googlemap
 
 # Google Fusion Table (Beta!)
-
 <div class="gmaps"><div id="perf2_canvas"></div></div>
 <script>
+(function() {
   var tableid_1 = 628739;
   var tableid_2 = 685404;
   var zoom = 5;
@@ -175,6 +213,7 @@ Generated tiles, how? tile server?
 
   layer_2.setMap(map);
   var layer_2 = new google.maps.FusionTablesLayer(tableid_2);
+}());
 </script>
 
 <!--
