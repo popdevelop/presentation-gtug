@@ -80,6 +80,13 @@ This is what google maps can look like
 
 !SLIDE full-page
 
+# Custom Static Tiles
+![Custom Tiles](customtiles.png)
+
+[Custom tiles with Mapbox](http://demo.mapbox.com/dc-nightvision.html)
+
+!SLIDE full-page
+
 # Style notation #
     @@@ javascript
     {

@@ -244,16 +244,9 @@ Generated tiles, how? tile server?
 -->
 !SLIDE full-page
 
-# Custom Tiles
-![Custom Tiles](customtiles.png)
-
-[Custom tiles with Mapbox](http://demo.mapbox.com/dc-nightvision.html)
-
-!SLIDE full-page
-
 #[Custom Tiles](http://maps.google.com/help/maps/elections/index.html#fundrace)
 
-<iframe title="Mapnificent Trip Planing" width="640" height="410"
+<iframe title="Us elections" width="800" height="410"
 src="http://maps.google.com/help/maps/elections/index.html#fundrace"
 framborder="0"></iframe>
 
@@ -333,16 +326,6 @@ sql-like api from your javascript!
 
 !SLIDE full-page
 
-# Performance Tips
-
-* Supermarker
-* Markerlight
-* [Marker Test 1](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
-* [Marker Test 2](http://www.svennerberg.com/examples/markers/markerPerformance.html)
-* [SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
-
-!SLIDE full-page
-
 # Data simplification
 * Simplify polylines
 * Fetch data more efficient
@@ -351,6 +334,13 @@ sql-like api from your javascript!
   * Divide data, overlayinfo, markerinfo
 
 <!--
+# Performance Tips
+
+* Supermarker
+* Markerlight
+* [Marker Test 1](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
+* [Marker Test 2](http://www.svennerberg.com/examples/markers/markerPerformance.html)
+* [SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
 
 http://code.google.com/intl/sv-SE/apis/maps/documentation/utilities/polylinealgorithm.html
 how to code polylines smart, raksträckor tex brezenhams?
