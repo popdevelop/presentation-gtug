@@ -11,12 +11,18 @@
 * Background from embedded
 * Now into web
 
+!SLIDE full-page
+
+# Popdevelop TV
+
+<iframe title="YouTube video player" width="640" height="410"
+src="http://www.youtube.com/embed/DQ3ZCWFVx-4" frameborder="0"
+allowfullscreen></iframe>
+
 !SLIDE full-page work
 
-# Some of our work
+# What we do
 
 * [kollektivt.se](http://kollektivt.se) - Bus visualisation
 * [taglaget.nu](http://taglaget.nu) - Train visualisation
-<!-- Mer?
-Dogvibes, Consulting embedded, Consulting web, Iphone utveckling, Arduino
--->
+* Web, Linux Embedded and iPhone development

@@ -43,20 +43,6 @@ framborder="0"></iframe>
 src="http://www.youtube.com/embed/w44cdIOor7E#t=1m5s" frameborder="0"
 allowfullscreen></iframe>
 
-
-!SLIDE full-page
-
-#References, länkar
-
-### [Add all links here](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-### [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-
 !SLIDE full-page
 
 * [http://popdevelop.com](http://popdevelop.com)
@@ -64,7 +50,4 @@ allowfullscreen></iframe>
 * [http://www.youtube.com/popdevelop](http://www.youtube.com/popdevelop)
 * [http://flickr.com/popdevelop](http://flickr.com/popdevelop)
 * [http://github.com/popdevelop](http://popdevelop.github.com/FIXME)
-
-#Visa hemma hos popdevelop?
-<!-- FIXME LINKS -->
 
