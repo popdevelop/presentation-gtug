@@ -1,4 +1,5 @@
 document.writeln('<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>');
+document.writeln('<script type="text/javascript" src="http://gmaps-utility-library-dev.googlecode.com/svn/tags/markermanager/1.1/src/markermanager.js"></script>');
 
 $(document).ready(function() {
   setTimeout(function() {

@@ -12,11 +12,55 @@ this case for the map to be rendered
 the map to be draggable
 -->
 
-!SLIDE full-page
+!SLIDE full-page googlemap_perf1
 
 # Why?
 
-![Uncluster Image](uncluster.jpg)
+<button id="addmarkers">Add 100 Markers</button>
+<button id="clearmarkers">Clear Markers</button>
+<div class="gmaps"><div id="perf1_canvas"></div></div>
+
+<script>
+(function() {
+
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf1_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var markers = [];
+  google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+       $('#addmarkers').click(function() {
+         var bounds = map.getBounds();
+         var southWest = bounds.getSouthWest();
+         var northEast = bounds.getNorthEast();
+         var lngSpan = northEast.lng() - southWest.lng();
+         var latSpan = northEast.lat() - southWest.lat();
+         var j = 100;
+         while(j--){
+           var point = new google.maps.LatLng(southWest.lat() + latSpan * Math.random(), southWest.lng() + lngSpan * Math.random());
+           var marker = new google.maps.Marker({position:point, map:map});
+           markers.push(marker);
+         }
+       });
+   });
+   $('#clearmarkers').click(function() {
+     var i = markers.length;
+     while(i--){
+      markers[i].setMap(null);
+     }
+     markers = [];
+   });
+  $('.googlemap_perf1').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+}());
+</script>
 
 (livedemo, markers)
 <!--
@@ -94,6 +138,56 @@ Often distance-based Clusteringm but attributes works good also
 
 [MarkerClusterer by google](http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html)
 
+!SLIDE full-page googlemap_perf2
+
+# MarkerCluster 
+
+<button id="addmarkerscluster">Add 100 Markers with MarkerClusterer</button>
+<button id="clearmarkerscluster">Clear Markers</button>
+<div class="gmaps"><div id="perf2_canvas"></div></div>
+
+<script>
+(function() {
+
+  var zoom = 5;
+  var center = new google.maps.LatLng(55, 13);
+
+  var map = new google.maps.Map(document.getElementById('perf2_canvas'), {
+    center: center,
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+
+  var markerCluster = new MarkerClusterer(map);
+  google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+       $('#addmarkerscluster').click(function() {
+         var markers = [];
+         var bounds = map.getBounds();
+         var southWest = bounds.getSouthWest();
+         var northEast = bounds.getNorthEast();
+         var lngSpan = northEast.lng() - southWest.lng();
+         var latSpan = northEast.lat() - southWest.lat();
+         var j = 100;
+         while(j--){
+           var point = new google.maps.LatLng(southWest.lat() + latSpan * Math.random(), southWest.lng() + lngSpan * Math.random());
+           var marker = new google.maps.Marker({'position': point});
+           markers.push(marker);
+         }
+         markerCluster.addMarkers(markers);
+         markers = [];
+       });
+   });
+   $('#clearmarkerscluster').click(function() {
+     markerCluster.clearMarkers();
+   });
+  $('.googlemap_perf2').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+}());
+</script>
+
 <!--
 all of you have probably seen this
 what is it
@@ -130,17 +224,6 @@ http://www.usda.gov/recovery/map/
 
 !SLIDE full-page
 
-# Performance Tips
-
-* Supermarker
-* Markerlight
-* [Marker Test 1](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
-* [Marker Test 2](http://www.svennerberg.com/examples/markers/markerPerformance.html)
-* [SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
-
-
-!SLIDE full-page
-
 # Add Layers
 * Generated tiles
 * Heatmaps
@@ -166,7 +249,7 @@ Generated tiles, how? tile server?
 src="http://maps.google.com/help/maps/elections/index.html#fundrace"
 framborder="0"></iframe>
 
-!SLIDE full-page
+!SLIDE full-page googlemap_perf3
 
 # KML
 
@@ -186,14 +269,20 @@ framborder="0"></iframe>
       'http://myxa.popdevelop.net/homes.kmz?token=90', {
       preserveViewport: true, suppressInfoWindows:
       true });
-  layer.setMap(this.map);
+  layer.setMap(map);
+
+  $('.googlemap_perf3').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
+
 }());
 </script>
 
-!SLIDE full-page googlemap
+!SLIDE full-page googlemap_perf4
 
 # Google Fusion Table (Beta!)
-<div class="gmaps"><div id="perf2_canvas"></div></div>
+<div class="gmaps"><div id="perf4_canvas"></div></div>
 <script>
 (function() {
   var tableid_1 = 628739;
@@ -201,7 +290,7 @@ framborder="0"></iframe>
   var zoom = 5;
   var center = new google.maps.LatLng(55, 13);
 
-  var map = new google.maps.Map(document.getElementById('perf2_canvas'), {
+  var map = new google.maps.Map(document.getElementById('perf4_canvas'), {
     center: center,
     zoom: zoom,
     mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -211,8 +300,12 @@ framborder="0"></iframe>
   layer_1.setQuery("SELECT * FROM " + tableid_1);
   layer_1.setMap(map);
 
-  layer_2.setMap(map);
   var layer_2 = new google.maps.FusionTablesLayer(tableid_2);
+  layer_2.setMap(map);
+  $('.googlemap_perf4').bind("showoff:show", function() {
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(Gmap.LatLng());
+  });
 }());
 </script>
 
@@ -223,6 +316,16 @@ intensity map
 markers with interaction, custom marker and overlay
 sql-like api from your javascript!
 -->
+
+!SLIDE full-page
+
+# Performance Tips
+
+* Supermarker
+* Markerlight
+* [Marker Test 1](http://gmaps-samples-v3.googlecode.com/svn/trunk/toomanymarkers/toomanymarkers.html)
+* [Marker Test 2](http://www.svennerberg.com/examples/markers/markerPerformance.html)
+* [SuperMarker style](http://nickjohnson.com/b/google-maps-v3-how-to-quickly-add-many-markers)
 
 !SLIDE full-page
 

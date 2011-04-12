@@ -70,11 +70,13 @@ $('.family').bind('showoff:next', function(e) {
 This is what you get!
 <div class="gmaps"><div id="canvas"></div></div>
 <script>
+(function() {
   var map = new google.maps.Map(document.getElementById("canvas"), Gmap.Options());
   $('.googlemap').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
     map.setCenter(Gmap.LatLng());
   });
+}());
 </script>
 
 !SLIDE full-page features
