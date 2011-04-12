@@ -181,10 +181,12 @@ Often distance-based Clusteringm but attributes works good also
    $('#clearmarkerscluster').click(function() {
      markerCluster.clearMarkers();
    });
+
   $('.googlemap_perf2').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
     map.setCenter(Gmap.LatLng());
   });
+
 }());
 </script>
 
