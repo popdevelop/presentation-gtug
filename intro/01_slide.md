@@ -36,7 +36,7 @@ $('.family').bind('showoff:next', function(e) {
 !SLIDE full-page
 # Introduction, Google Maps V3#
 * Released May 2009
-* Completely re-written from V2
+* Completely re-written from V2 (2006)
 * No API-key needed
 * With mobile devices in mind
 
@@ -56,10 +56,10 @@ $('.family').bind('showoff:next', function(e) {
 * Optimized "bootstrap" process
 * Lower latency
 
-!SLIDE full-page incremental
+!SLIDE full-page incremental gis
 # GIS Basics
 ## Image tiles ##
-  - Bitmap images
+  - Bitmap images ![Tiles](tiles.png)
   - For all zoom levels
   - Non-interactive
 

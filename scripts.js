@@ -1,12 +1,25 @@
 document.writeln('<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>');
 document.writeln('<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>');
 
+/* XXX: This is ugly */
 $(document).ready(function() {
   setTimeout(function() {
     Cufon.replace('h1');
     Cufon.replace('h2');
     Cufon.replace('h3');
     Cufon.replace('li');
+
+    /* Open all links in a new window */
+    $("a[href^=http]").each(function(){
+       console.log('a')
+       if(this.href.indexOf(location.hostname) == -1) {
+          $(this).attr({
+             target: "_blank",
+             title: "Opens in a new window"
+          });
+       }
+    })
+
   }, 400);
 });
 
