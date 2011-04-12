@@ -13,6 +13,17 @@ we can create our own marker using any HTML/CSS we want
 ### Example from [taglaget.nu](http://taglaget.nu) ###
 
 !SLIDE full-page
+# Custom marker, code #
+    @@@ javascript
+    /* Create marker class */
+    function MyMarker(...) { ... };
+    /* "Subclass" OverlayView */
+    MyMarker.prototype = new google.maps.OverlayView()
+    /* Implement "virtual" functions */
+    MyMarker.prototype.onAdd = function() { ... };
+    MyMarker.prototype.draw = function() { ... };
+
+!SLIDE full-page
 # Custom tiles #
 ### From [may 2010](http://googlegeodevelopers.blogspot.com/2010/05/add-touch-of-style-to-your-maps.html) Google allows styling of their tiles: ###
 

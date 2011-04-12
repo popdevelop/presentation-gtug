@@ -10,6 +10,7 @@ $(document).ready(function() {
   }, 400);
 });
 
+<<<<<<< HEAD
 
 $(function() {
   $('div.content').live('showoff:show', function(evt) {
