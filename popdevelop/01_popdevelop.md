@@ -28,6 +28,6 @@ allowfullscreen>
 
 # What we do
 
-* [kollektivt.se](http://kollektivt.se) - Bus visualisation
-* [taglaget.nu](http://taglaget.nu) - Train visualisation
 * Web, Linux Embedded and iPhone
+* Bus visualisation - [kollektivt.se](http://kollektivt.se)
+* Train visualisation - [taglaget.nu](http://taglaget.nu)

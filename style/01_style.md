@@ -86,7 +86,7 @@ This is what google maps can look like
 [Custom tiles with Mapbox](http://demo.mapbox.com/dc-nightvision.html)
 
 !SLIDE full-page
-
+# ' #
 # Style notation #
     @@@ javascript
     {
@@ -117,12 +117,12 @@ Try it at [Google custom style wizard](http://gmaps-samples-v3.googlecode.com/sv
 
 `disableDefaultUI: true /* in init-options */`
 
-* Map can be controlled programatically
+* Control map programatically
 
 `map.setCenter(<LatLng>);`
 `map.setZoom(<integer>);`
 
-* Make your own controls with HTML/JS
+* Make controls with HTML/JS
 
 !SLIDE full-page googlemap3
 # Example: own zoom buttons #

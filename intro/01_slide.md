@@ -38,7 +38,7 @@ $('.family').bind('showoff:next', function(e) {
 * Released May 2009
 * Completely re-written from V2
 * No API-key needed
-* Designed with mobile devices in mind
+* With mobile devices in mind
 
 (demo in iOS simulator)
 
@@ -57,7 +57,7 @@ $('.family').bind('showoff:next', function(e) {
 * Lower latency
 
 !SLIDE full-page incremental
-# GIS Basics gis
+# GIS Basics
 ## Image tiles ##
   - Bitmap images
   - For all zoom levels
@@ -102,8 +102,6 @@ This is what you get!
 
 !SLIDE full-page features
 # Some Google maps features
-Google maps has quite alot of built in features ready to be used. Here are a few:
-<br>
 ![Marker](../img/google-marker.jpeg)
 ![Infowindow](../img/infowindow.png)
 ![Polygons](../img/polygon.png)
