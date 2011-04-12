@@ -1,5 +1,5 @@
 !SLIDE center light-on-dark
-![background](../img/google-maps-intro.jpg)
+![background](google-maps-intro.jpg)
 # 2. Google maps #
 
 !SLIDE full-page family
@@ -102,9 +102,9 @@ This is what you get!
 
 !SLIDE full-page features
 # Some Google maps features
-![Marker](../img/google-marker.jpeg)
-![Infowindow](../img/infowindow.png)
-![Polygons](../img/polygon.png)
+![Marker](google-marker.jpeg)
+![Infowindow](infowindow.png)
+![Polygons](polygon.png)
 ### Marker ###
 `var marker = new google.maps.Marker({...});`
 ### Info Window ###

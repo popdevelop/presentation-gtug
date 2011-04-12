@@ -8,7 +8,7 @@
 By using Googles [Custom Overlay Class](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing) 
 we can create our own marker using any HTML/CSS we want
 
-![Custom marker](../img/custom_marker.png)
+![Custom marker](custom_marker.png)
 
 ### Example from [taglaget.nu](http://taglaget.nu) ###
 

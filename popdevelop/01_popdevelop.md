@@ -1,10 +1,10 @@
 !SLIDE center light-on-dark
-![background](../img/google-maps-intro.jpg)
+![background](google-maps-intro.jpg)
 # Google Maps on the web #
 ### by Popdevelop 13/4 - 2011 ###
 
 !SLIDE center light-on-dark popdevelop
-![background](../img/popdevelop.jpg)
+![background](popdevelop.jpg)
 # 1. Popdevelop #
 
 !SLIDE full-page
