@@ -57,16 +57,16 @@ $('.family').bind('showoff:next', function(e) {
 * Lower latency
 
 !SLIDE full-page incremental gis
-# GIS Basics
+# Map Basics
 ## Image tiles ##
   - Bitmap images ![Tiles](tiles.png)
   - For all zoom levels
   - Non-interactive
 
-## Primitives ##
-  - Points
-  - LineString
-  - PolyLine
+## Map features ##
+  - Markers
+  - Polylines
+  - Polygon
 
 
 !SLIDE full-page
@@ -113,3 +113,4 @@ This is what you get!
 `var cicle = new google.maps.Circle({...});`
 
 ### See them all at [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
+v

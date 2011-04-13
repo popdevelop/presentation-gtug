@@ -191,8 +191,6 @@ http://thefixedgear.wordpress.com/
 !SLIDE full-page
 
 # Layers
-
-
     @@@ javascript
     var lay1 = new google.maps.KmlLayer('url/data.kmz');
     lay1.setMap(map);
@@ -269,3 +267,14 @@ http://thefixedgear.wordpress.com/
   });
 }());
 </script>
+
+!SLIDE full-page
+# Beyond Google maps #
+
+## Limitations ##
+* Unable to extract data
+
+## Alternatives ##
+* openLayers JS-library
+* open street map tiles
+* [nominatim](http://nominatim.openstreetmap.org) geocoder
