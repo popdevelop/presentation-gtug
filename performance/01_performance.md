@@ -171,7 +171,10 @@ http://thefixedgear.wordpress.com/
 
 !SLIDE full-page
 
-# Data simplification - FIXA BILD
+# Data simplification
+![Simplify polylines](line.gif)
+
+* Simplify data
 * Encoded polylines
 
 !SLIDE full-page
