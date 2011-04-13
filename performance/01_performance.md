@@ -13,6 +13,8 @@ http://thefixedgear.wordpress.com/
 
 <button id="addmarkers">Add 100 Markers</button>
 <button id="clearmarkers">Clear Markers</button>
+<span class="countmarkers"></span>
+
 <div class="gmaps">
   <div id="perf1_canvas">
   </div>
@@ -31,6 +33,7 @@ http://thefixedgear.wordpress.com/
   });
 
   var markers = [];
+  $('.countmarkers').html(markers.length + ' markers');
   google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
     $('#addmarkers').click(function() {
       var bounds = map.getBounds();
@@ -44,14 +47,17 @@ http://thefixedgear.wordpress.com/
         var marker = new google.maps.Marker({position:point, map:map});
         markers.push(marker);
       }
+      $('.countmarkers').html(markers.length + ' markers');
     });
   });
   $('#clearmarkers').click(function() {
     var i = markers.length;
     while(i--){
       markers[i].setMap(null);
+      delete markers[i];
     }
     markers = [];
+    $('.countmarkers').html(markers.length + ' markers');
   });
   $('.googlemap_perf1').bind("showoff:show", function() {
     google.maps.event.trigger(map, 'resize');
@@ -112,6 +118,7 @@ http://thefixedgear.wordpress.com/
 
 <button id="addmarkerscluster">Add 100 Markers with MarkerClusterer</button>
 <button id="clearmarkerscluster">Clear Markers</button>
+<span class="count"></span>
 <div class="gmaps">
   <div id="perf2_canvas">
   </div>
@@ -131,6 +138,7 @@ http://thefixedgear.wordpress.com/
 
 
   var markerCluster = new MarkerClusterer(map);
+  $('.count').html(markerCluster.getTotalMarkers() + ' markers, ' + markerCluster.getTotalClusters() + ' clusters');
   google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
     $('#addmarkerscluster').click(function() {
       var markers = [];
@@ -146,11 +154,13 @@ http://thefixedgear.wordpress.com/
         markers.push(marker);
       }
       markerCluster.addMarkers(markers);
+      $('.count').html(markerCluster.getTotalMarkers() + ' markers, ' + markerCluster.getTotalClusters() + ' clusters');
       markers = [];
     });
   });
   $('#clearmarkerscluster').click(function() {
     markerCluster.clearMarkers();
+    $('.count').html(markerCluster.getTotalMarkers() + ' markers, ' + markerCluster.getTotalClusters() + ' clusters');
   });
 
   $('.googlemap_perf2').bind("showoff:show", function() {
