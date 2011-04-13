@@ -177,6 +177,8 @@ http://thefixedgear.wordpress.com/
 * Simplify data
 * Encoded polylines
 
+<!-- Image cred to webhelp.esri.com -->
+
 !SLIDE full-page
 
 # Add Layers
