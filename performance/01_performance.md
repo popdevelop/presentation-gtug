@@ -109,7 +109,7 @@ http://thefixedgear.wordpress.com/
 ![MarkerClusterer](markerclusterer.jpg)
 
 [MarkerManger by google](http://google-maps-utility-library-v3.googlecode.com/svn/tags/markermanager/1.0/docs/reference.html)
-[MarkerClusterer by google](http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html)
+[MarkerClusterer by google](http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/docs/reference.html)
 
 !SLIDE full-page googlemap_perf2
 
@@ -275,6 +275,6 @@ http://thefixedgear.wordpress.com/
 * Unable to extract data
 
 ## Alternatives ##
+* Yahoo, Bing, OSM
 * openLayers JS-library
-* open street map tiles
 * [nominatim](http://nominatim.openstreetmap.org) geocoder

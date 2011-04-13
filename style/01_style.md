@@ -6,8 +6,8 @@
 
 !SLIDE full-page
 # Custom marker #
-By using Googles [Custom Overlay Class](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing)
-we can create our own marker using any HTML/CSS we want
+Use [Custom Overlay Class](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing)
+to create custom marker with HTML/CSS
 
 ![Custom marker](custom_marker.png)
 
@@ -24,7 +24,7 @@ we can create our own marker using any HTML/CSS we want
     MyMarker.prototype.onAdd = function() { ... };
     MyMarker.prototype.draw = function() { ... };
 
-### [Full example](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing) ###
+### Full example in [documentation](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing) ###
 
 !SLIDE full-page
 # Custom tiles #

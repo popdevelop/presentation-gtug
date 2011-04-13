@@ -18,6 +18,8 @@
 * Places
 * Ad sense maps
 * Transit
+* Panoramio
+* ...
 
 <script>
 (function() {
@@ -67,10 +69,11 @@ $('.family').bind('showoff:next', function(e) {
   - Markers
   - Polylines
   - Polygon
+  - Entities in browser
 
 
 !SLIDE full-page
-# Google Maps basics #
+# Google Maps hello world #
 * Easy to get started with!
 * Include library:
 
@@ -84,8 +87,7 @@ $('.family').bind('showoff:next', function(e) {
 
 
 !SLIDE full-page googlemap
-# Standard Google map #
-This is what you get!
+# This is what you get #
 <div class="gmaps">
   <div id="canvas">
   </div>
@@ -113,4 +115,3 @@ This is what you get!
 `var cicle = new google.maps.Circle({...});`
 
 ### See them all at [Google Maps Javascript API V3 Overlays](http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html) ###
-v
