@@ -81,7 +81,6 @@ http://thefixedgear.wordpress.com/
    * Network time for request
    * Profiling, function calls
  * [http://jsperf.com/browse](http://jsperf.com/browse)
- * Online Marker tests
  * Try different browsers/computers
 
 !SLIDE full-page
