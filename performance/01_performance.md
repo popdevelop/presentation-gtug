@@ -219,7 +219,7 @@ framborder="0"></iframe>
   });
 
   var layer = new google.maps.KmlLayer(
-      'http://myxa.popdevelop.net/homes.kmz?token=90', {
+      'http://sewa.se/municipalities.kmz', {
       preserveViewport: true, suppressInfoWindows:
       true });
   layer.setMap(map);
@@ -234,14 +234,14 @@ framborder="0"></iframe>
 
 !SLIDE full-page googlemap_perf4
 
-# Google Fusion Tables (Beta!)FIXA LINK
+# [Google Fusion Tables (Beta!)](http://www.google.com/fusiontables/DataSource?dsrcid=693476)
 <div class="gmaps">
   <div id="perf4_canvas">
   </div>
 </div>
 <script>
 (function() {
-  var tableid_1 = 628739;
+  var tableid_1 = 693476;
   var tableid_2 = 685404;
   var zoom = 5;
   var center = new google.maps.LatLng(55, 13);
