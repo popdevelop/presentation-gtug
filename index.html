@@ -138,6 +138,8 @@
 <li>Places</li>
 <li>Ad sense maps</li>
 <li>Transit</li>
+<li>Panoramio</li>
+<li>...</li>
 </ul>
 
 
@@ -207,10 +209,11 @@ $('.family').bind('showoff:next', function(e) {
 <li>Markers</li>
 <li>Polylines</li>
 <li>Polygon</li>
+<li>Entities in browser</li>
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/6">
-<h1>Google Maps basics</h1>
+<h1>Google Maps hello world</h1>
 
 <ul>
 <li>Easy to get started with!</li>
@@ -232,9 +235,7 @@ $('.family').bind('showoff:next', function(e) {
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page googlemap" ref="intro/01_slide/7">
-<h1>Standard Google map</h1>
-
-<p>This is what you get!</p>
+<h1>This is what you get</h1>
 
 <div class="gmaps">
   <div id="canvas">
@@ -271,9 +272,7 @@ $('.family').bind('showoff:next', function(e) {
 
 <p><code>var cicle = new google.maps.Circle({...});</code></p>
 
-<h3>See them all at <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
-
-<p>v</p></div>
+<h3>See them all at <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3></div>
 </div><div class="slide" data-transition="none"><div class="content center light-on-dark" ref="style/01_style/1">
 <p><img src="./file/style/styling.jpg" width="1229" height="768" alt="background"/></p>
 
@@ -283,8 +282,8 @@ $('.family').bind('showoff:next', function(e) {
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/2">
 <h1>Custom marker</h1>
 
-<p>By using Googles <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing">Custom Overlay Class</a>
-we can create our own marker using any HTML/CSS we want</p>
+<p>Use <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing">Custom Overlay Class</a>
+to create custom marker with HTML/CSS</p>
 
 <p><img src="./file/style/custom_marker.png" width="426" height="311" alt="Custom marker"/></p>
 
@@ -300,7 +299,7 @@ MyMarker.prototype = new google.maps.OverlayView()
 MyMarker.prototype.onAdd = function() { ... };
 MyMarker.prototype.draw = function() { ... };</code></pre>
 
-<h3><a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing">Full example</a></h3></div>
+<h3>Full example in <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html#SubClassing">documentation</a></h3></div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="style/01_style/4">
 <h1>Custom tiles</h1>
 
@@ -574,7 +573,7 @@ http://thefixedgear.wordpress.com/
 <p><img src="./file/performance/markerclusterer.jpg" width="578" height="215" alt="MarkerClusterer"/></p>
 
 <p><a href="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markermanager/1.0/docs/reference.html">MarkerManger by google</a>
-<a href="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/examples/advanced_example.html">MarkerClusterer by google</a></p></div>
+<a href="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/docs/reference.html">MarkerClusterer by google</a></p></div>
 </div><div class="slide" data-transition="none"><div class="content full-page googlemap_perf2" ref="performance/01_performance/9">
 <h1>MarkerClusterer</h1>
 
@@ -758,8 +757,8 @@ lay2.setMap(map);</code></pre>
 <h2>Alternatives</h2>
 
 <ul>
+<li>Yahoo, Bing, OSM</li>
 <li>openLayers JS-library</li>
-<li>open street map tiles</li>
 <li><a href="http://nominatim.openstreetmap.org">nominatim</a> geocoder</li>
 </ul>
 </div>
