@@ -74,9 +74,9 @@ http://thefixedgear.wordpress.com/
  * Chrome developer tools or Firebug
    * Network time for request
    * Profiling, function calls
- * http://jsperf.com/browse
+ * [http://jsperf.com/browse](http://jsperf.com/browse)
  * Online Marker tests
- * Try different browsers
+ * Try different browsers/computers
 
 !SLIDE full-page
 
@@ -163,7 +163,30 @@ http://thefixedgear.wordpress.com/
 
 !SLIDE full-page
 
+# Fetch data more efficient
+* Slim down your protocol
+* Fetch using boundingbox
+
+<!-- ge ett exempel -->
+
+!SLIDE full-page
+
+# Data simplification - FIXA BILD
+* Encoded polylines
+
+!SLIDE full-page
+
 # Add Layers
+
+
+    @@@ javascript
+    var lay1 = new google.maps.KmlLayer('url/data.kmz');
+    lay1.setMap(map);
+
+    var lay2 = new google.maps.FusionTablesLayer(id);
+    lay2.setQuery("SELECT * FROM " + id);
+    lay2.setMap(map);
+
 * Generated tiles
 * Google Fusion Tables
 * KML
@@ -241,18 +264,3 @@ framborder="0"></iframe>
   });
 }());
 </script>
-
-!SLIDE full-page
-
-# Fetch data more efficient
-* Slim down your protocol
-* Fetch using boundingbox
-
-<!-- ge ett exempel -->
-
-!SLIDE full-page
-
-# Data simplification - FIXA BILD
-* Encoded polylines
-
-
