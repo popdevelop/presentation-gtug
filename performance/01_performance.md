@@ -175,7 +175,7 @@ http://thefixedgear.wordpress.com/
 ![Simplify polylines](line.gif)
 
 * Simplify data
-* Encoded polylines
+* [Encoded polylines](http://code.google.com/intl/sv/apis/maps/documentation/utilities/polylinealgorithm.html)
 
 <!-- Image cred to webhelp.esri.com -->
 
