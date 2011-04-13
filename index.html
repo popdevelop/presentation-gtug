@@ -190,7 +190,7 @@ $('.family').bind('showoff:next', function(e) {
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page incremental gis" ref="intro/01_slide/5">
-<h1>GIS Basics</h1>
+<h1>Map Basics</h1>
 
 <h2>Image tiles</h2>
 
@@ -201,12 +201,12 @@ $('.family').bind('showoff:next', function(e) {
 </ul>
 
 
-<h2>Primitives</h2>
+<h2>Map features</h2>
 
 <ul>
-<li>Points</li>
-<li>LineString</li>
-<li>PolyLine</li>
+<li>Markers</li>
+<li>Polylines</li>
+<li>Polygon</li>
 </ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content full-page" ref="intro/01_slide/6">
@@ -271,7 +271,9 @@ $('.family').bind('showoff:next', function(e) {
 
 <p><code>var cicle = new google.maps.Circle({...});</code></p>
 
-<h3>See them all at <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3></div>
+<h3>See them all at <a href="http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/overlays.html">Google Maps Javascript API V3 Overlays</a></h3>
+
+<p>v</p></div>
 </div><div class="slide" data-transition="none"><div class="content center light-on-dark" ref="style/01_style/1">
 <p><img src="./file/style/styling.jpg" width="1229" height="768" alt="background"/></p>
 
@@ -545,7 +547,6 @@ http://thefixedgear.wordpress.com/
 </ul>
 </li>
 <li><a href="http://jsperf.com/browse">http://jsperf.com/browse</a></li>
-<li>Online Marker tests</li>
 <li>Try different browsers/computers</li>
 </ul>
 </div>
@@ -743,6 +744,24 @@ lay2.setMap(map);</code></pre>
   });
 }());
 </script>
+</div>
+</div><div class="slide" data-transition="none"><div class="content full-page" ref="performance/01_performance/15">
+<h1>Beyond Google maps</h1>
+
+<h2>Limitations</h2>
+
+<ul>
+<li>Unable to extract data</li>
+</ul>
+
+
+<h2>Alternatives</h2>
+
+<ul>
+<li>openLayers JS-library</li>
+<li>open street map tiles</li>
+<li><a href="http://nominatim.openstreetmap.org">nominatim</a> geocoder</li>
+</ul>
 </div>
 </div><div class="slide" data-transition="none"><div class="content center light-on-dark" ref="wrapup/01_wrapup/1">
 <p><img src="./file/wrapup/cool.jpg" width="1280" height="960" alt="background"/></p>
