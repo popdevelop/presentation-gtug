@@ -181,7 +181,7 @@ http://thefixedgear.wordpress.com/
 
 !SLIDE full-page
 
-# Add Layers
+# Layers
 
 
     @@@ javascript
@@ -192,17 +192,8 @@ http://thefixedgear.wordpress.com/
     lay2.setQuery("SELECT * FROM " + id);
     lay2.setMap(map);
 
-* Generated tiles
 * Google Fusion Tables
 * KML
-
-!SLIDE full-page
-
-#[Custom Tiles](http://maps.google.com/help/maps/elections/index.html#fundrace)
-
-<iframe title="Us elections" width="800" height="410"
-src="http://maps.google.com/help/maps/elections/index.html#fundrace"
-framborder="0"></iframe>
 
 !SLIDE full-page googlemap_perf3
 
