@@ -7,6 +7,16 @@ body {
     font-size: 18px;
 }
 
+body.fullScreen {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #preso a,
 #preso a:visited,
 #preso a:link {
@@ -43,9 +53,14 @@ body {
     color: #fff;
     background-color: #000;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     display: inline-block;
     padding: 0.1em 0.5em;
     opacity: 0.7;
+    filter:alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
     left: 2em;
 }
 #preso .light-on-dark h3 {
